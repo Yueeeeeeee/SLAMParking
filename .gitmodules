@@ -1,0 +1,3 @@
+[submodule "parking/code/Driver/driver/subs/vesc"] 
+	  path = parking/code/Driver/driver/subs/vesc
+	    url = https://git.fortiss.org/ff1/ff1_libraries/vesc.git

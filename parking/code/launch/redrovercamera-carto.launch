@@ -1,0 +1,9 @@
+<launch>
+    <node name="rplidar_ros" pkg="rplidar_ros" type="rplidarNode" output="screen" />
+    <node name="brick_imu" pkg="brick_imu" type="brick_imu" output="screen" />
+    <node name="odometry" pkg="odometry" type="odometry" output="screen" />
+
+    <node pkg="tf" type="static_transform_publisher" name="base_to_laser_broadcaster" args="0 0 0 0 0 0 base_link laser_frame 100" />
+    <node pkg="tf" type="static_transform_publisher" name="odom_to_map_broadcaster" args="0 0 0 0 0 0 odom map 100" />
+    <node pkg="tf" type="static_transform_publisher" name="map_to_base_broadcaster" args="0 0 0 0 0 0 map base_link 100" />
+</launch>

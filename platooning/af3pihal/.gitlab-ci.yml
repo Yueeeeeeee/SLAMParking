@@ -1,0 +1,43 @@
+image: git.fortiss.org:5001/ff1/images/ff1rasp
+
+variables:
+  GIT_STRATEGY: clone
+ 
+stages:
+  - build
+  - deploy
+ 
+cmake:
+  stage: build
+  script:
+  - mkdir -p build/
+  - cd build/
+  - cmake ..
+  - make
+  - mkdir -p artifacts/usr/lib
+  - mkdir -p artifacts/usr/include
+  - cp libaf3pihal.* artifacts/usr/lib/
+  - cp ../inc/* artifacts/usr/include
+  - mv artifacts/ ../
+  artifacts:
+    paths:
+    - artifacts/
+
+push_to_overlay:
+  stage: deploy
+  script:
+    - cd ..
+    - git clone https://gitlab-ci-token:${CI_JOB_TOKEN}@git.fortiss.org/ff1/ff1_package
+    - ls -la
+    - cd ff1_package
+    - rm -r ff1_libraries/af3pihal
+    - mkdir -p ff1_libraries/af3pihal
+    - cp -r ../af3pihal/artifacts/* ff1_libraries/af3pihal
+    - git status #debug
+    - tree #debug
+    - git config --global user.name "${GITLAB_USER_NAME}"
+    - git config --global user.email "${GITLAB_USER_EMAIL}"
+    - git add -A
+    - git diff-index --quiet HEAD || git commit -m "pushing latest af3pihal artifacts" # commit only if there is anything to commit
+    - git push http://${GITLAB_USER_NAME}:${PERSONAL_ACCESS_TOKEN}@git.fortiss.org/ff1/ff1_package HEAD:master
+    

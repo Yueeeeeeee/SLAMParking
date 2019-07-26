@@ -1,0 +1,5 @@
+float32 actual_velocity
+float32 actual_steering
+float32 velocity
+float32 steering
+uint8 state

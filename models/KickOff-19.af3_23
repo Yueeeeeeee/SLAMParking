@@ -1,0 +1,1985 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<org-fortiss-af3-project:FileProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:org-fortiss-af3-allocation="http://www.fortiss.org/af3/allocation" xmlns:org-fortiss-af3-component="http://www.fortiss.org/af3/component" xmlns:org-fortiss-af3-component-annotation="http://www.fortiss.org/af3/component/annotation" xmlns:org-fortiss-af3-component-behavior-code="http://www.fortiss.org/af3/component/behavior/code" xmlns:org-fortiss-af3-expression="http://www.fortiss.org/af3/expression" xmlns:org-fortiss-af3-expression-terms="http://www.fortiss.org/af3/expression/terms" xmlns:org-fortiss-af3-expression-terms-imperative="http://www.fortiss.org/af3/expression/terms/imperative" xmlns:org-fortiss-af3-expression-types="http://www.fortiss.org/af3/expression/types" xmlns:org-fortiss-af3-mira="http://www.fortiss.org/af3/mira" xmlns:org-fortiss-af3-mira-verification="http://www.fortiss.org/af3/mira/verification" xmlns:org-fortiss-af3-operatorpanel="http://www.fortiss.org/af3/operatorpanel" xmlns:org-fortiss-af3-platform="http://www.fortiss.org/af3/platform" xmlns:org-fortiss-af3-platform-allocation="http://www.fortiss.org/af3/platform/allocation" xmlns:org-fortiss-af3-platform-annotation="http://www.fortiss.org/af3/platform/annotation" xmlns:org-fortiss-af3-platform-modelsconference="http://www.fortiss.org/af3/platform/modelsconference" xmlns:org-fortiss-af3-platform-raspberry="http://www.fortiss.org/af3/platform/raspberry" xmlns:org-fortiss-af3-project="http://www.fortiss.org/af3/project" xmlns:org-fortiss-af3-project-configuration="http://www.fortiss.org/af3/project/configuration" xmlns:org-fortiss-af3-project-development="http://www.fortiss.org/af3/project/development" xmlns:org-fortiss-af3-project-execution="http://www.fortiss.org/af3/project/execution" xmlns:org-fortiss-af3-safety-annotation="http://www.fortiss.org/af3/safety/annotation" xmlns:org-fortiss-af3-state="http://www.fortiss.org/af3/state" xmlns:org-fortiss-tooling-base-model-layout="http://www.fortiss.org/tooling/base/model/layout" xmi:id="46" id="46" name="KickOff-19" af3Version="2.13.0.qualifier">
+  <rootElements xsi:type="org-fortiss-af3-project:ProjectConfiguration" xmi:id="1" id="1">
+    <configurationElements xsi:type="org-fortiss-af3-project-configuration:TypeSystemConfiguration" xmi:id="2" id="2">
+      <typesystem xsi:type="org-fortiss-af3-expression:MicroTypeSystem"/>
+    </configurationElements>
+    <configurationElements xsi:type="org-fortiss-af3-project-configuration:DevelopmentProcessConfiguration" xmi:id="3" id="3">
+      <development xsi:type="org-fortiss-af3-project-development:ConstraintBasedDevelopmentProcess" currentObjective="4" constraintInstanceContainer="3">
+        <configurations xmi:id="4" id="4" name="Default configuration"/>
+      </development>
+    </configurationElements>
+  </rootElements>
+  <rootElements xsi:type="org-fortiss-af3-component:ComponentArchitecture" xmi:id="5" id="5" name="Component Architecture">
+    <containedElements xsi:type="org-fortiss-af3-component:Component" xmi:id="6" id="6" name="Logical Viewpoint" comment="">
+      <containedElements xsi:type="org-fortiss-af3-component:Component" xmi:id="9" id="9" name="System" comment="">
+        <containedElements xsi:type="org-fortiss-af3-component:Component" xmi:id="487" id="487" name="Toggle White" comment="">
+          <specifications xsi:type="org-fortiss-af3-component:CausalityComponentSpecification" xmi:id="488" id="488"/>
+          <specifications xsi:type="org-fortiss-af3-component:VerifBehaviourComponentSpecification" xmi:id="489" id="489"/>
+          <specifications xsi:type="org-fortiss-af3-safety-annotation:SafetyIntegrityLevel" xmi:id="490" id="490"/>
+          <specifications xsi:type="org-fortiss-af3-component-annotation:MemoryRequirement" xmi:id="491" id="491"/>
+          <specifications xsi:type="org-fortiss-af3-state:StateAutomaton" xmi:id="509" id="509">
+            <containedElements xsi:type="org-fortiss-af3-state:State" xmi:id="510" id="510" name="State Automaton" comment="">
+              <containedElements xsi:type="org-fortiss-af3-state:State" xmi:id="511" id="511" name="Off" comment="">
+                <specifications xsi:type="org-fortiss-af3-state:StateSpecification" xmi:id="512" id="512" initial="true">
+                  <idleTransitionsSpecifications xmi:id="513" id="513">
+                    <actions stringRepresentation="Output = 0">
+                      <variable identifier="Output"/>
+                      <value xsi:type="org-fortiss-af3-expression-terms:IntConst"/>
+                    </actions>
+                  </idleTransitionsSpecifications>
+                </specifications>
+                <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentExitConnector" xmi:id="519" id="519" name="Exit" comment="" outgoing="521">
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="-0.6696389456766376"/>
+                </connectors>
+                <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentEntryConnector" xmi:id="524" id="524" name="Entry" comment="" incoming="541">
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="0.65788860518221"/>
+                </connectors>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="72" y="72"/>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+              </containedElements>
+              <containedElements xsi:type="org-fortiss-af3-state:State" xmi:id="516" id="516" name="On" comment="">
+                <specifications xsi:type="org-fortiss-af3-state:StateSpecification" xmi:id="517" id="517">
+                  <idleTransitionsSpecifications xmi:id="518" id="518">
+                    <actions stringRepresentation="Output = 1">
+                      <variable identifier="Output"/>
+                      <value xsi:type="org-fortiss-af3-expression-terms:IntConst" value="1"/>
+                    </actions>
+                  </idleTransitionsSpecifications>
+                </specifications>
+                <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentEntryConnector" xmi:id="520" id="520" name="Entry" comment="" incoming="521">
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="-2.426043646130814"/>
+                </connectors>
+                <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentExitConnector" xmi:id="523" id="523" name="Exit" comment="" outgoing="534">
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="2.5590178320996677"/>
+                </connectors>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="288" y="72"/>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+              </containedElements>
+              <containedElements xsi:type="org-fortiss-af3-state:State" xmi:id="527" id="527" name="State1" comment="">
+                <specifications xsi:type="org-fortiss-af3-state:StateSpecification" xmi:id="528" id="528">
+                  <idleTransitionsSpecifications xmi:id="529" id="529">
+                    <actions stringRepresentation="Output = 1">
+                      <variable identifier="Output"/>
+                      <value xsi:type="org-fortiss-af3-expression-terms:IntConst" value="1"/>
+                    </actions>
+                  </idleTransitionsSpecifications>
+                </specifications>
+                <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentEntryConnector" xmi:id="533" id="533" name="Input" comment="" incoming="534">
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="-2.677945044588987"/>
+                </connectors>
+                <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentExitConnector" xmi:id="536" id="536" name="Exit" comment="" outgoing="538">
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="2.642245931909663"/>
+                </connectors>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="288" y="228"/>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+              </containedElements>
+              <containedElements xsi:type="org-fortiss-af3-state:State" xmi:id="530" id="530" name="State2" comment="">
+                <specifications xsi:type="org-fortiss-af3-state:StateSpecification" xmi:id="531" id="531">
+                  <idleTransitionsSpecifications xmi:id="532" id="532">
+                    <actions stringRepresentation="Output = 0">
+                      <variable identifier="Output"/>
+                      <value xsi:type="org-fortiss-af3-expression-terms:IntConst"/>
+                    </actions>
+                  </idleTransitionsSpecifications>
+                </specifications>
+                <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentEntryConnector" xmi:id="537" id="537" name="Entry" comment="" incoming="538">
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="0.5543074962015513"/>
+                </connectors>
+                <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentExitConnector" xmi:id="540" id="540" name="Output" comment="" outgoing="541">
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="-0.7568345055586883"/>
+                </connectors>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="72" y="228"/>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+              </containedElements>
+              <specifications xsi:type="org-fortiss-af3-state:StateSpecification" xmi:id="514" id="514">
+                <idleTransitionsSpecifications xmi:id="515" id="515"/>
+              </specifications>
+              <connections xsi:type="org-fortiss-af3-state:TransitionSegment" xmi:id="521" id="521" name="Transition Segment" comment="" source="519" target="520">
+                <specifications xsi:type="org-fortiss-af3-state:TransitionSegmentSpecification" xmi:id="522" id="522">
+                  <guard stringRepresentation="Input != NoVal &amp;&amp; Input == 1">
+                    <expression xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                      <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="And"/>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                        <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="NotEqual"/>
+                        <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="Input"/>
+                        <arguments xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+                      </arguments>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                        <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="Equal"/>
+                        <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="Input"/>
+                        <arguments xsi:type="org-fortiss-af3-expression-terms:IntConst" value="1"/>
+                      </arguments>
+                    </expression>
+                  </guard>
+                  <actions stringRepresentation="Output = 1">
+                    <variable identifier="Output"/>
+                    <value xsi:type="org-fortiss-af3-expression-terms:IntConst" value="1"/>
+                  </actions>
+                </specifications>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+              </connections>
+              <connections xsi:type="org-fortiss-af3-state:TransitionSegment" xmi:id="534" id="534" name="Transition Segment" comment="" source="523" target="533">
+                <specifications xsi:type="org-fortiss-af3-state:TransitionSegmentSpecification" xmi:id="535" id="535">
+                  <guard stringRepresentation="Input == NoVal || Input == 0">
+                    <expression xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                      <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="Or"/>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                        <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="Equal"/>
+                        <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="Input"/>
+                        <arguments xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+                      </arguments>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                        <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="Equal"/>
+                        <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="Input"/>
+                        <arguments xsi:type="org-fortiss-af3-expression-terms:IntConst"/>
+                      </arguments>
+                    </expression>
+                  </guard>
+                  <actions stringRepresentation="Output = 1">
+                    <variable identifier="Output"/>
+                    <value xsi:type="org-fortiss-af3-expression-terms:IntConst" value="1"/>
+                  </actions>
+                </specifications>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+              </connections>
+              <connections xsi:type="org-fortiss-af3-state:TransitionSegment" xmi:id="538" id="538" name="Transition Segment" comment="" source="536" target="537">
+                <specifications xsi:type="org-fortiss-af3-state:TransitionSegmentSpecification" xmi:id="539" id="539">
+                  <guard stringRepresentation="Input != NoVal &amp;&amp; Input == 1">
+                    <expression xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                      <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="And"/>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                        <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="NotEqual"/>
+                        <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="Input"/>
+                        <arguments xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+                      </arguments>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                        <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="Equal"/>
+                        <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="Input"/>
+                        <arguments xsi:type="org-fortiss-af3-expression-terms:IntConst" value="1"/>
+                      </arguments>
+                    </expression>
+                  </guard>
+                  <actions stringRepresentation="Output = 0">
+                    <variable identifier="Output"/>
+                    <value xsi:type="org-fortiss-af3-expression-terms:IntConst"/>
+                  </actions>
+                </specifications>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+              </connections>
+              <connections xsi:type="org-fortiss-af3-state:TransitionSegment" xmi:id="541" id="541" name="Transition Segment" comment="" source="540" target="524">
+                <specifications xsi:type="org-fortiss-af3-state:TransitionSegmentSpecification" xmi:id="542" id="542">
+                  <guard stringRepresentation="Input == NoVal || Input == 0">
+                    <expression xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                      <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="Or"/>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                        <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="Equal"/>
+                        <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="Input"/>
+                        <arguments xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+                      </arguments>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                        <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="Equal"/>
+                        <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="Input"/>
+                        <arguments xsi:type="org-fortiss-af3-expression-terms:IntConst"/>
+                      </arguments>
+                    </expression>
+                  </guard>
+                  <actions stringRepresentation="Output = 0">
+                    <variable identifier="Output"/>
+                    <value xsi:type="org-fortiss-af3-expression-terms:IntConst"/>
+                  </actions>
+                </specifications>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+              </connections>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+            </containedElements>
+          </specifications>
+          <connectors xsi:type="org-fortiss-af3-component:InputPort" xmi:id="496" id="496" name="Input" comment="" incoming="498">
+            <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="497" id="497">
+              <type xsi:type="org-fortiss-af3-expression-types:TInt"/>
+              <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+            </specifications>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="24" orientation="WEST"/>
+          </connectors>
+          <connectors xsi:type="org-fortiss-af3-component:OutputPort" xmi:id="501" id="501" name="Output" comment="" outgoing="505">
+            <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="502" id="502">
+              <type xsi:type="org-fortiss-af3-expression-types:TInt"/>
+              <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+            </specifications>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="24" orientation="EAST"/>
+          </connectors>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="156" y="204"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="216" height="72"/>
+        </containedElements>
+        <containedElements xsi:type="org-fortiss-af3-component:Component" xmi:id="543" id="543" name="Toggle Red" comment="">
+          <specifications xsi:type="org-fortiss-af3-component:CausalityComponentSpecification" xmi:id="544" id="544"/>
+          <specifications xsi:type="org-fortiss-af3-component:VerifBehaviourComponentSpecification" xmi:id="545" id="545"/>
+          <specifications xsi:type="org-fortiss-af3-safety-annotation:SafetyIntegrityLevel" xmi:id="546" id="546"/>
+          <specifications xsi:type="org-fortiss-af3-component-annotation:MemoryRequirement" xmi:id="547" id="547"/>
+          <specifications xsi:type="org-fortiss-af3-state:StateAutomaton" xmi:id="548" id="548">
+            <containedElements xsi:type="org-fortiss-af3-state:State" xmi:id="549" id="549" name="State Automaton" comment="">
+              <containedElements xsi:type="org-fortiss-af3-state:State" xmi:id="550" id="550" name="Off" comment="">
+                <specifications xsi:type="org-fortiss-af3-state:StateSpecification" xmi:id="551" id="551" initial="true">
+                  <idleTransitionsSpecifications xmi:id="552" id="552">
+                    <actions stringRepresentation="Output = 0">
+                      <variable identifier="Output"/>
+                      <value xsi:type="org-fortiss-af3-expression-terms:IntConst"/>
+                    </actions>
+                  </idleTransitionsSpecifications>
+                </specifications>
+                <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentExitConnector" xmi:id="553" id="553" name="Exit" comment="" outgoing="572">
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="-0.6696389456766376"/>
+                </connectors>
+                <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentEntryConnector" xmi:id="554" id="554" name="Entry" comment="" incoming="578">
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="0.65788860518221"/>
+                </connectors>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="72" y="72"/>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+              </containedElements>
+              <containedElements xsi:type="org-fortiss-af3-state:State" xmi:id="555" id="555" name="On" comment="">
+                <specifications xsi:type="org-fortiss-af3-state:StateSpecification" xmi:id="556" id="556">
+                  <idleTransitionsSpecifications xmi:id="557" id="557">
+                    <actions stringRepresentation="Output = 1">
+                      <variable identifier="Output"/>
+                      <value xsi:type="org-fortiss-af3-expression-terms:IntConst" value="1"/>
+                    </actions>
+                  </idleTransitionsSpecifications>
+                </specifications>
+                <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentEntryConnector" xmi:id="558" id="558" name="Entry" comment="" incoming="572">
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="-2.426043646130814"/>
+                </connectors>
+                <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentExitConnector" xmi:id="559" id="559" name="Exit" comment="" outgoing="574">
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="2.5590178320996677"/>
+                </connectors>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="288" y="72"/>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+              </containedElements>
+              <containedElements xsi:type="org-fortiss-af3-state:State" xmi:id="560" id="560" name="State1" comment="">
+                <specifications xsi:type="org-fortiss-af3-state:StateSpecification" xmi:id="561" id="561">
+                  <idleTransitionsSpecifications xmi:id="562" id="562">
+                    <actions stringRepresentation="Output = 1">
+                      <variable identifier="Output"/>
+                      <value xsi:type="org-fortiss-af3-expression-terms:IntConst" value="1"/>
+                    </actions>
+                  </idleTransitionsSpecifications>
+                </specifications>
+                <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentEntryConnector" xmi:id="563" id="563" name="Input" comment="" incoming="574">
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="-2.677945044588987"/>
+                </connectors>
+                <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentExitConnector" xmi:id="564" id="564" name="Exit" comment="" outgoing="576">
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="2.642245931909663"/>
+                </connectors>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="288" y="228"/>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+              </containedElements>
+              <containedElements xsi:type="org-fortiss-af3-state:State" xmi:id="565" id="565" name="State2" comment="">
+                <specifications xsi:type="org-fortiss-af3-state:StateSpecification" xmi:id="566" id="566">
+                  <idleTransitionsSpecifications xmi:id="567" id="567">
+                    <actions stringRepresentation="Output = 0">
+                      <variable identifier="Output"/>
+                      <value xsi:type="org-fortiss-af3-expression-terms:IntConst"/>
+                    </actions>
+                  </idleTransitionsSpecifications>
+                </specifications>
+                <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentEntryConnector" xmi:id="568" id="568" name="Entry" comment="" incoming="576">
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="0.5543074962015513"/>
+                </connectors>
+                <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentExitConnector" xmi:id="569" id="569" name="Output" comment="" outgoing="578">
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="-0.7568345055586883"/>
+                </connectors>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="72" y="228"/>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+              </containedElements>
+              <specifications xsi:type="org-fortiss-af3-state:StateSpecification" xmi:id="570" id="570">
+                <idleTransitionsSpecifications xmi:id="571" id="571"/>
+              </specifications>
+              <connections xsi:type="org-fortiss-af3-state:TransitionSegment" xmi:id="572" id="572" name="Transition Segment" comment="" source="553" target="558">
+                <specifications xsi:type="org-fortiss-af3-state:TransitionSegmentSpecification" xmi:id="573" id="573">
+                  <guard stringRepresentation="Input != NoVal &amp;&amp; Input == 1">
+                    <expression xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                      <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="And"/>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                        <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="NotEqual"/>
+                        <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="Input"/>
+                        <arguments xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+                      </arguments>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                        <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="Equal"/>
+                        <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="Input"/>
+                        <arguments xsi:type="org-fortiss-af3-expression-terms:IntConst" value="1"/>
+                      </arguments>
+                    </expression>
+                  </guard>
+                  <actions stringRepresentation="Output = 1">
+                    <variable identifier="Output"/>
+                    <value xsi:type="org-fortiss-af3-expression-terms:IntConst" value="1"/>
+                  </actions>
+                </specifications>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+              </connections>
+              <connections xsi:type="org-fortiss-af3-state:TransitionSegment" xmi:id="574" id="574" name="Transition Segment" comment="" source="559" target="563">
+                <specifications xsi:type="org-fortiss-af3-state:TransitionSegmentSpecification" xmi:id="575" id="575">
+                  <guard stringRepresentation="Input == NoVal || Input == 0">
+                    <expression xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                      <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="Or"/>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                        <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="Equal"/>
+                        <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="Input"/>
+                        <arguments xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+                      </arguments>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                        <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="Equal"/>
+                        <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="Input"/>
+                        <arguments xsi:type="org-fortiss-af3-expression-terms:IntConst"/>
+                      </arguments>
+                    </expression>
+                  </guard>
+                  <actions stringRepresentation="Output = 1">
+                    <variable identifier="Output"/>
+                    <value xsi:type="org-fortiss-af3-expression-terms:IntConst" value="1"/>
+                  </actions>
+                </specifications>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+              </connections>
+              <connections xsi:type="org-fortiss-af3-state:TransitionSegment" xmi:id="576" id="576" name="Transition Segment" comment="" source="564" target="568">
+                <specifications xsi:type="org-fortiss-af3-state:TransitionSegmentSpecification" xmi:id="577" id="577">
+                  <guard stringRepresentation="Input != NoVal &amp;&amp; Input == 1">
+                    <expression xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                      <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="And"/>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                        <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="NotEqual"/>
+                        <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="Input"/>
+                        <arguments xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+                      </arguments>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                        <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="Equal"/>
+                        <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="Input"/>
+                        <arguments xsi:type="org-fortiss-af3-expression-terms:IntConst" value="1"/>
+                      </arguments>
+                    </expression>
+                  </guard>
+                  <actions stringRepresentation="Output = 0">
+                    <variable identifier="Output"/>
+                    <value xsi:type="org-fortiss-af3-expression-terms:IntConst"/>
+                  </actions>
+                </specifications>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+              </connections>
+              <connections xsi:type="org-fortiss-af3-state:TransitionSegment" xmi:id="578" id="578" name="Transition Segment" comment="" source="569" target="554">
+                <specifications xsi:type="org-fortiss-af3-state:TransitionSegmentSpecification" xmi:id="579" id="579">
+                  <guard stringRepresentation="Input == NoVal || Input == 0">
+                    <expression xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                      <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="Or"/>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                        <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="Equal"/>
+                        <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="Input"/>
+                        <arguments xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+                      </arguments>
+                      <arguments xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                        <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="Equal"/>
+                        <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="Input"/>
+                        <arguments xsi:type="org-fortiss-af3-expression-terms:IntConst"/>
+                      </arguments>
+                    </expression>
+                  </guard>
+                  <actions stringRepresentation="Output = 0">
+                    <variable identifier="Output"/>
+                    <value xsi:type="org-fortiss-af3-expression-terms:IntConst"/>
+                  </actions>
+                </specifications>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+              </connections>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+            </containedElements>
+          </specifications>
+          <connectors xsi:type="org-fortiss-af3-component:InputPort" xmi:id="589" id="589" name="Input" comment="" incoming="591">
+            <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="590" id="590">
+              <type xsi:type="org-fortiss-af3-expression-types:TInt"/>
+              <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+            </specifications>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="24" orientation="WEST"/>
+          </connectors>
+          <connectors xsi:type="org-fortiss-af3-component:OutputPort" xmi:id="592" id="592" name="Output" comment="" outgoing="596">
+            <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="593" id="593">
+              <type xsi:type="org-fortiss-af3-expression-types:TInt"/>
+              <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+            </specifications>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="24" orientation="EAST"/>
+          </connectors>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="156" y="276"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="216" height="72"/>
+        </containedElements>
+        <containedElements xsi:type="org-fortiss-af3-component:Component" xmi:id="1077" id="1077" name="Signal Processing Out" comment="">
+          <specifications xsi:type="org-fortiss-af3-component:CausalityComponentSpecification" xmi:id="1078" id="1078"/>
+          <specifications xsi:type="org-fortiss-af3-component:VerifBehaviourComponentSpecification" xmi:id="1079" id="1079"/>
+          <specifications xsi:type="org-fortiss-af3-component-annotation:MemoryRequirement" xmi:id="1080" id="1080"/>
+          <specifications xsi:type="org-fortiss-af3-safety-annotation:SafetyIntegrityLevel" xmi:id="1081" id="1081"/>
+          <specifications xsi:type="org-fortiss-af3-component-behavior-code:CodeSpecification" xmi:id="1134" id="1134" stringRepresentation="LED_LEFT = 0;&#xA;LED_RIGHT = 0;&#xA;if(LEDLeftOn == true) {&#xA;&#x9;LED_LEFT = 1;&#xA;}&#xA;if (LEDRightOn == true) {&#xA;&#x9;LED_RIGHT = 1;&#xA;}&#xA;return;&#xA;">
+            <body>
+              <statements xsi:type="org-fortiss-af3-expression-terms-imperative:Assignment">
+                <variable identifier="LED_LEFT"/>
+                <value xsi:type="org-fortiss-af3-expression-terms:IntConst"/>
+              </statements>
+              <statements xsi:type="org-fortiss-af3-expression-terms-imperative:Assignment">
+                <variable identifier="LED_RIGHT"/>
+                <value xsi:type="org-fortiss-af3-expression-terms:IntConst"/>
+              </statements>
+              <statements xsi:type="org-fortiss-af3-expression-terms-imperative:IfThenElse">
+                <guard xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                  <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="Equal"/>
+                  <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="LEDLeftOn"/>
+                  <arguments xsi:type="org-fortiss-af3-expression-terms:BoolConst" value="true"/>
+                </guard>
+                <thenBlock>
+                  <statements xsi:type="org-fortiss-af3-expression-terms-imperative:Assignment">
+                    <variable identifier="LED_LEFT"/>
+                    <value xsi:type="org-fortiss-af3-expression-terms:IntConst" value="1"/>
+                  </statements>
+                </thenBlock>
+              </statements>
+              <statements xsi:type="org-fortiss-af3-expression-terms-imperative:IfThenElse">
+                <guard xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                  <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="Equal"/>
+                  <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="LEDRightOn"/>
+                  <arguments xsi:type="org-fortiss-af3-expression-terms:BoolConst" value="true"/>
+                </guard>
+                <thenBlock>
+                  <statements xsi:type="org-fortiss-af3-expression-terms-imperative:Assignment">
+                    <variable identifier="LED_RIGHT"/>
+                    <value xsi:type="org-fortiss-af3-expression-terms:IntConst" value="1"/>
+                  </statements>
+                </thenBlock>
+              </statements>
+              <statements xsi:type="org-fortiss-af3-expression-terms-imperative:Return"/>
+            </body>
+          </specifications>
+          <connectors xsi:type="org-fortiss-af3-component:OutputPort" xmi:id="1084" id="1084" name="LED_LEFT" comment="" outgoing="1088">
+            <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="1085" id="1085">
+              <type xsi:type="org-fortiss-af3-expression-types:TInt"/>
+              <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+            </specifications>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="72" orientation="EAST"/>
+          </connectors>
+          <connectors xsi:type="org-fortiss-af3-component:OutputPort" xmi:id="2312" id="2312" name="LED_RIGHT" comment="" outgoing="2316">
+            <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="2313" id="2313">
+              <type xsi:type="org-fortiss-af3-expression-types:TInt"/>
+              <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+            </specifications>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="12" orientation="EAST"/>
+          </connectors>
+          <connectors xsi:type="org-fortiss-af3-component:InputPort" xmi:id="2304" id="2304" name="LEDRightOn" comment="" incoming="2306">
+            <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="2305" id="2305">
+              <type xsi:type="org-fortiss-af3-expression-types:TBool"/>
+              <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+            </specifications>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="12" orientation="WEST"/>
+          </connectors>
+          <connectors xsi:type="org-fortiss-af3-component:InputPort" xmi:id="2309" id="2309" name="LEDLeftOn" comment="" incoming="2311">
+            <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="2310" id="2310">
+              <type xsi:type="org-fortiss-af3-expression-types:TBool"/>
+              <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+            </specifications>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="72" orientation="WEST"/>
+          </connectors>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="768"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="253" height="85"/>
+        </containedElements>
+        <containedElements xsi:type="org-fortiss-af3-component:Component" xmi:id="2166" id="2166" name="Signal Processing In" comment="">
+          <containedElements xsi:type="org-fortiss-af3-component:Component" xmi:id="1049" id="1049" name="Int2Bool" comment="">
+            <specifications xsi:type="org-fortiss-af3-component:CausalityComponentSpecification" xmi:id="1050" id="1050"/>
+            <specifications xsi:type="org-fortiss-af3-component:VerifBehaviourComponentSpecification" xmi:id="1051" id="1051"/>
+            <specifications xsi:type="org-fortiss-af3-component-annotation:MemoryRequirement" xmi:id="1052" id="1052"/>
+            <specifications xsi:type="org-fortiss-af3-safety-annotation:SafetyIntegrityLevel" xmi:id="1053" id="1053"/>
+            <specifications xsi:type="org-fortiss-af3-component-behavior-code:CodeSpecification" xmi:id="1133" id="1133">
+              <body>
+                <statements xsi:type="org-fortiss-af3-expression-terms-imperative:Assignment">
+                  <variable identifier="ButtonLeftPressed"/>
+                  <value xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                    <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="Equal"/>
+                    <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="TURN_LEFT"/>
+                    <arguments xsi:type="org-fortiss-af3-expression-terms:IntConst" value="1"/>
+                  </value>
+                </statements>
+                <statements xsi:type="org-fortiss-af3-expression-terms-imperative:Assignment">
+                  <variable identifier="ButtonRightPressed"/>
+                  <value xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                    <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="Equal"/>
+                    <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="TURN_RIGHT"/>
+                    <arguments xsi:type="org-fortiss-af3-expression-terms:IntConst" value="1"/>
+                  </value>
+                </statements>
+                <statements xsi:type="org-fortiss-af3-expression-terms-imperative:Return"/>
+              </body>
+            </specifications>
+            <connectors xsi:type="org-fortiss-af3-component:InputPort" xmi:id="2187" id="2187" name="TURN_LEFT" comment="" incoming="2189">
+              <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="2188" id="2188">
+                <type xsi:type="org-fortiss-af3-expression-types:TInt"/>
+                <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+              </specifications>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="36" orientation="WEST"/>
+            </connectors>
+            <connectors xsi:type="org-fortiss-af3-component:InputPort" xmi:id="2194" id="2194" name="TURN_RIGHT" comment="" incoming="2196">
+              <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="2195" id="2195">
+                <type xsi:type="org-fortiss-af3-expression-types:TInt"/>
+                <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+              </specifications>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="108" orientation="WEST"/>
+            </connectors>
+            <connectors xsi:type="org-fortiss-af3-component:OutputPort" xmi:id="2145" id="2145" name="ButtonLeftPressed" comment="" outgoing="2211">
+              <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="2146" id="2146">
+                <type xsi:type="org-fortiss-af3-expression-types:TBool"/>
+                <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+              </specifications>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="36" orientation="EAST"/>
+            </connectors>
+            <connectors xsi:type="org-fortiss-af3-component:OutputPort" xmi:id="2140" id="2140" name="ButtonRightPressed" comment="" outgoing="2212">
+              <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="2141" id="2141">
+                <type xsi:type="org-fortiss-af3-expression-types:TBool"/>
+                <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+              </specifications>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="108" orientation="EAST"/>
+            </connectors>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="204" y="216"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="144" height="157"/>
+          </containedElements>
+          <containedElements xsi:type="org-fortiss-af3-component:Component" xmi:id="2095" id="2095" name="EdgeDetectionLeft" comment="">
+            <specifications xsi:type="org-fortiss-af3-component:CausalityComponentSpecification" xmi:id="2096" id="2096"/>
+            <specifications xsi:type="org-fortiss-af3-component:VerifBehaviourComponentSpecification" xmi:id="2097" id="2097"/>
+            <specifications xsi:type="org-fortiss-af3-safety-annotation:SafetyIntegrityLevel" xmi:id="2098" id="2098"/>
+            <specifications xsi:type="org-fortiss-af3-component-annotation:MemoryRequirement" xmi:id="2099" id="2099"/>
+            <specifications xsi:type="org-fortiss-af3-state:StateAutomaton" xmi:id="2100" id="2100">
+              <containedElements xsi:type="org-fortiss-af3-state:State" xmi:id="2101" id="2101" name="State Automaton" comment="">
+                <containedElements xsi:type="org-fortiss-af3-state:State" xmi:id="2102" id="2102" name="NotPressed" comment="">
+                  <specifications xsi:type="org-fortiss-af3-state:StateSpecification" xmi:id="2103" id="2103" initial="true">
+                    <idleTransitionsSpecifications xmi:id="2104" id="2104">
+                      <actions stringRepresentation="ToggleLeft = false&#xA;">
+                        <variable identifier="ToggleLeft"/>
+                        <value xsi:type="org-fortiss-af3-expression-terms:BoolConst"/>
+                      </actions>
+                    </idleTransitionsSpecifications>
+                  </specifications>
+                  <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentExitConnector" xmi:id="2105" id="2105" name="Exit" comment="" outgoing="2114">
+                    <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                    <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                    <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                    <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                    <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="-0.5880026035475675"/>
+                  </connectors>
+                  <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentEntryConnector" xmi:id="2106" id="2106" name="Entry" comment="" incoming="2116">
+                    <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                    <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                    <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                    <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                    <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="1.1902899496825317"/>
+                  </connectors>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="22" y="101"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="222" height="138"/>
+                </containedElements>
+                <containedElements xsi:type="org-fortiss-af3-state:State" xmi:id="2107" id="2107" name="Pressed" comment="">
+                  <specifications xsi:type="org-fortiss-af3-state:StateSpecification" xmi:id="2108" id="2108">
+                    <idleTransitionsSpecifications xmi:id="2109" id="2109">
+                      <actions stringRepresentation="ToggleLeft = false&#xA;">
+                        <variable identifier="ToggleLeft"/>
+                        <value xsi:type="org-fortiss-af3-expression-terms:BoolConst"/>
+                      </actions>
+                    </idleTransitionsSpecifications>
+                  </specifications>
+                  <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentEntryConnector" xmi:id="2110" id="2110" name="Entry" comment="" incoming="2114">
+                    <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                    <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                    <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                    <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                    <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="-2.2763645044801075"/>
+                  </connectors>
+                  <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentExitConnector" xmi:id="2111" id="2111" name="Exit" comment="" outgoing="2116">
+                    <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                    <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                    <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                    <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                    <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="2.5535900500422257"/>
+                  </connectors>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="524" y="116"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="235" height="146"/>
+                </containedElements>
+                <specifications xsi:type="org-fortiss-af3-state:StateSpecification" xmi:id="2112" id="2112">
+                  <idleTransitionsSpecifications xmi:id="2113" id="2113"/>
+                </specifications>
+                <connections xsi:type="org-fortiss-af3-state:TransitionSegment" xmi:id="2114" id="2114" name="Transition Segment" comment="" source="2105" target="2110">
+                  <specifications xsi:type="org-fortiss-af3-state:TransitionSegmentSpecification" xmi:id="2115" id="2115">
+                    <guard stringRepresentation="ButtonLeftPressed == true">
+                      <expression xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                        <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="Equal"/>
+                        <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="ButtonLeftPressed"/>
+                        <arguments xsi:type="org-fortiss-af3-expression-terms:BoolConst" value="true"/>
+                      </expression>
+                    </guard>
+                    <actions stringRepresentation="ToggleLeft = false&#xA;">
+                      <variable identifier="ToggleLeft"/>
+                      <value xsi:type="org-fortiss-af3-expression-terms:BoolConst"/>
+                    </actions>
+                  </specifications>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+                </connections>
+                <connections xsi:type="org-fortiss-af3-state:TransitionSegment" xmi:id="2116" id="2116" name="Transition Segment" comment="" source="2111" target="2106">
+                  <specifications xsi:type="org-fortiss-af3-state:TransitionSegmentSpecification" xmi:id="2117" id="2117">
+                    <guard stringRepresentation="ButtonLeftPressed == false">
+                      <expression xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                        <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="Equal"/>
+                        <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="ButtonLeftPressed"/>
+                        <arguments xsi:type="org-fortiss-af3-expression-terms:BoolConst"/>
+                      </expression>
+                    </guard>
+                    <actions stringRepresentation="ToggleLeft = true&#xA;">
+                      <variable identifier="ToggleLeft"/>
+                      <value xsi:type="org-fortiss-af3-expression-terms:BoolConst" value="true"/>
+                    </actions>
+                  </specifications>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+                </connections>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+              </containedElements>
+            </specifications>
+            <connectors xsi:type="org-fortiss-af3-component:InputPort" xmi:id="2147" id="2147" name="ButtonLeftPressed" comment="" incoming="2211">
+              <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="2148" id="2148">
+                <type xsi:type="org-fortiss-af3-expression-types:TBool"/>
+                <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+              </specifications>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="24" orientation="WEST"/>
+            </connectors>
+            <connectors xsi:type="org-fortiss-af3-component:OutputPort" xmi:id="2199" id="2199" name="ToggleLeft" comment="" outgoing="2203">
+              <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="2200" id="2200">
+                <type xsi:type="org-fortiss-af3-expression-types:TBool"/>
+                <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+              </specifications>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="24" orientation="EAST"/>
+            </connectors>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="540" y="228"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="229" height="72"/>
+          </containedElements>
+          <containedElements xsi:type="org-fortiss-af3-component:Component" xmi:id="1963" id="1963" name="EdgeDetectionRight" comment="">
+            <specifications xsi:type="org-fortiss-af3-component:CausalityComponentSpecification" xmi:id="1964" id="1964"/>
+            <specifications xsi:type="org-fortiss-af3-component:VerifBehaviourComponentSpecification" xmi:id="1965" id="1965"/>
+            <specifications xsi:type="org-fortiss-af3-safety-annotation:SafetyIntegrityLevel" xmi:id="1966" id="1966"/>
+            <specifications xsi:type="org-fortiss-af3-component-annotation:MemoryRequirement" xmi:id="1967" id="1967"/>
+            <specifications xsi:type="org-fortiss-af3-state:StateAutomaton" xmi:id="1968" id="1968">
+              <containedElements xsi:type="org-fortiss-af3-state:State" xmi:id="1969" id="1969" name="State Automaton" comment="">
+                <containedElements xsi:type="org-fortiss-af3-state:State" xmi:id="1970" id="1970" name="NotPressed" comment="">
+                  <specifications xsi:type="org-fortiss-af3-state:StateSpecification" xmi:id="1971" id="1971" initial="true">
+                    <idleTransitionsSpecifications xmi:id="1972" id="1972">
+                      <actions stringRepresentation="ToggleRight = false&#xA;">
+                        <variable identifier="ToggleRight"/>
+                        <value xsi:type="org-fortiss-af3-expression-terms:BoolConst"/>
+                      </actions>
+                    </idleTransitionsSpecifications>
+                  </specifications>
+                  <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentExitConnector" xmi:id="1973" id="1973" name="Exit" comment="" outgoing="1982">
+                    <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                    <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                    <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                    <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                    <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="-0.5880026035475675"/>
+                  </connectors>
+                  <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentEntryConnector" xmi:id="1974" id="1974" name="Entry" comment="" incoming="1984">
+                    <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                    <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                    <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                    <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                    <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="1.1902899496825317"/>
+                  </connectors>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="22" y="101"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="222" height="138"/>
+                </containedElements>
+                <containedElements xsi:type="org-fortiss-af3-state:State" xmi:id="1975" id="1975" name="Pressed" comment="">
+                  <specifications xsi:type="org-fortiss-af3-state:StateSpecification" xmi:id="1976" id="1976">
+                    <idleTransitionsSpecifications xmi:id="1977" id="1977">
+                      <actions stringRepresentation="ToggleRight = false&#xA;">
+                        <variable identifier="ToggleRight"/>
+                        <value xsi:type="org-fortiss-af3-expression-terms:BoolConst"/>
+                      </actions>
+                    </idleTransitionsSpecifications>
+                  </specifications>
+                  <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentEntryConnector" xmi:id="1978" id="1978" name="Entry" comment="" incoming="1982">
+                    <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                    <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                    <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                    <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                    <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="-2.2763645044801075"/>
+                  </connectors>
+                  <connectors xsi:type="org-fortiss-af3-state:TransitionSegmentExitConnector" xmi:id="1979" id="1979" name="Exit" comment="" outgoing="1984">
+                    <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                    <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+                    <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+                    <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+                    <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="2.5535900500422257"/>
+                  </connectors>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="524" y="116"/>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="235" height="146"/>
+                </containedElements>
+                <specifications xsi:type="org-fortiss-af3-state:StateSpecification" xmi:id="1980" id="1980">
+                  <idleTransitionsSpecifications xmi:id="1981" id="1981"/>
+                </specifications>
+                <connections xsi:type="org-fortiss-af3-state:TransitionSegment" xmi:id="1982" id="1982" name="Transition Segment" comment="" source="1973" target="1978">
+                  <specifications xsi:type="org-fortiss-af3-state:TransitionSegmentSpecification" xmi:id="1983" id="1983">
+                    <guard stringRepresentation="ButtonRightPressed == true">
+                      <expression xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                        <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="Equal"/>
+                        <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="ButtonRightPressed"/>
+                        <arguments xsi:type="org-fortiss-af3-expression-terms:BoolConst" value="true"/>
+                      </expression>
+                    </guard>
+                    <actions stringRepresentation="ToggleRight = false&#xA;">
+                      <variable identifier="ToggleRight"/>
+                      <value xsi:type="org-fortiss-af3-expression-terms:BoolConst"/>
+                    </actions>
+                  </specifications>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+                </connections>
+                <connections xsi:type="org-fortiss-af3-state:TransitionSegment" xmi:id="1984" id="1984" name="Transition Segment" comment="" source="1979" target="1974">
+                  <specifications xsi:type="org-fortiss-af3-state:TransitionSegmentSpecification" xmi:id="1985" id="1985">
+                    <guard stringRepresentation="ButtonRightPressed == false">
+                      <expression xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                        <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="Equal"/>
+                        <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="ButtonRightPressed"/>
+                        <arguments xsi:type="org-fortiss-af3-expression-terms:BoolConst"/>
+                      </expression>
+                    </guard>
+                    <actions stringRepresentation="ToggleRight = true&#xA;">
+                      <variable identifier="ToggleRight"/>
+                      <value xsi:type="org-fortiss-af3-expression-terms:BoolConst" value="true"/>
+                    </actions>
+                  </specifications>
+                  <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+                </connections>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+                <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+              </containedElements>
+            </specifications>
+            <connectors xsi:type="org-fortiss-af3-component:InputPort" xmi:id="2142" id="2142" name="ButtonRightPressed" comment="" incoming="2212">
+              <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="2143" id="2143">
+                <type xsi:type="org-fortiss-af3-expression-types:TBool"/>
+                <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+              </specifications>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="24" orientation="WEST"/>
+            </connectors>
+            <connectors xsi:type="org-fortiss-af3-component:OutputPort" xmi:id="2206" id="2206" name="ToggleRight" comment="" outgoing="2210">
+              <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="2207" id="2207">
+                <type xsi:type="org-fortiss-af3-expression-types:TBool"/>
+                <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+              </specifications>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="24" orientation="EAST"/>
+            </connectors>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="540" y="300"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="228" height="72"/>
+          </containedElements>
+          <containedElements xsi:type="org-fortiss-af3-component:Component" xmi:id="2561" id="2561" name="DIRConvertor" comment="">
+            <specifications xsi:type="org-fortiss-af3-component:CausalityComponentSpecification" xmi:id="2562" id="2562"/>
+            <specifications xsi:type="org-fortiss-af3-component:VerifBehaviourComponentSpecification" xmi:id="2563" id="2563"/>
+            <specifications xsi:type="org-fortiss-af3-component-annotation:MemoryRequirement" xmi:id="2564" id="2564"/>
+            <specifications xsi:type="org-fortiss-af3-safety-annotation:SafetyIntegrityLevel" xmi:id="2565" id="2565"/>
+            <specifications xsi:type="org-fortiss-af3-component-behavior-code:CodeSpecification" xmi:id="2592" id="2592">
+              <body>
+                <statements xsi:type="org-fortiss-af3-expression-terms-imperative:IfThenElse">
+                  <guard xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                    <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="LowerThan"/>
+                    <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="DIRIn"/>
+                    <arguments xsi:type="org-fortiss-af3-expression-terms:DoubleConst" value="2.4"/>
+                  </guard>
+                  <thenBlock>
+                    <statements xsi:type="org-fortiss-af3-expression-terms-imperative:Assignment">
+                      <variable identifier="DIROut"/>
+                      <value xsi:type="org-fortiss-af3-expression-terms:IntConst" value="1"/>
+                    </statements>
+                  </thenBlock>
+                  <elseBlock>
+                    <statements xsi:type="org-fortiss-af3-expression-terms-imperative:Assignment">
+                      <variable identifier="DIROut"/>
+                      <value xsi:type="org-fortiss-af3-expression-terms:IntConst" value="-1"/>
+                    </statements>
+                  </elseBlock>
+                </statements>
+                <statements xsi:type="org-fortiss-af3-expression-terms-imperative:Return"/>
+              </body>
+            </specifications>
+            <connectors xsi:type="org-fortiss-af3-component:InputPort" xmi:id="2582" id="2582" name="DIRIn" comment="" incoming="2584">
+              <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="2583" id="2583">
+                <type xsi:type="org-fortiss-af3-expression-types:TDouble"/>
+                <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+              </specifications>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="24" orientation="WEST"/>
+            </connectors>
+            <connectors xsi:type="org-fortiss-af3-component:OutputPort" xmi:id="2587" id="2587" name="DIROut" comment="" outgoing="2591">
+              <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="2588" id="2588">
+                <type xsi:type="org-fortiss-af3-expression-types:TDouble"/>
+                <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+              </specifications>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="24" orientation="EAST"/>
+            </connectors>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="204" y="48"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="216" height="72"/>
+          </containedElements>
+          <containedElements xsi:type="org-fortiss-af3-component:Component" xmi:id="2610" id="2610" name="SPEEDConvertor" comment="">
+            <specifications xsi:type="org-fortiss-af3-component:CausalityComponentSpecification" xmi:id="2611" id="2611"/>
+            <specifications xsi:type="org-fortiss-af3-component:VerifBehaviourComponentSpecification" xmi:id="2612" id="2612"/>
+            <specifications xsi:type="org-fortiss-af3-component-annotation:MemoryRequirement" xmi:id="2613" id="2613"/>
+            <specifications xsi:type="org-fortiss-af3-safety-annotation:SafetyIntegrityLevel" xmi:id="2614" id="2614"/>
+            <specifications xsi:type="org-fortiss-af3-component-behavior-code:CodeSpecification" xmi:id="2615" id="2615">
+              <body>
+                <statements xsi:type="org-fortiss-af3-expression-terms-imperative:IfThenElse">
+                  <guard xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                    <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="GreaterThan"/>
+                    <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="SPEED"/>
+                    <arguments xsi:type="org-fortiss-af3-expression-terms:IntConst" value="1"/>
+                  </guard>
+                  <thenBlock>
+                    <statements xsi:type="org-fortiss-af3-expression-terms-imperative:Assignment">
+                      <variable identifier="SPEEDOut"/>
+                      <value xsi:type="org-fortiss-af3-expression-terms:IntConst" value="1"/>
+                    </statements>
+                  </thenBlock>
+                  <elseBlock>
+                    <statements xsi:type="org-fortiss-af3-expression-terms-imperative:Assignment">
+                      <variable identifier="SPEEDOut"/>
+                      <value xsi:type="org-fortiss-af3-expression-terms:IntConst"/>
+                    </statements>
+                  </elseBlock>
+                </statements>
+                <statements xsi:type="org-fortiss-af3-expression-terms-imperative:Return"/>
+              </body>
+            </specifications>
+            <connectors xsi:type="org-fortiss-af3-component:InputPort" xmi:id="2622" id="2622" name="SPEED" comment="" incoming="2624">
+              <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="2623" id="2623">
+                <type xsi:type="org-fortiss-af3-expression-types:TDouble"/>
+                <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+              </specifications>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="24" orientation="WEST"/>
+            </connectors>
+            <connectors xsi:type="org-fortiss-af3-component:OutputPort" xmi:id="2627" id="2627" name="SPEEDOut" comment="" outgoing="2631">
+              <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="2628" id="2628">
+                <type xsi:type="org-fortiss-af3-expression-types:TDouble"/>
+                <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+              </specifications>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+              <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="24" orientation="EAST"/>
+            </connectors>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="204" y="144"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="216" height="72"/>
+          </containedElements>
+          <specifications xsi:type="org-fortiss-af3-component:CausalityComponentSpecification" xmi:id="2167" id="2167"/>
+          <specifications xsi:type="org-fortiss-af3-component:VerifBehaviourComponentSpecification" xmi:id="2168" id="2168"/>
+          <specifications xsi:type="org-fortiss-af3-component-annotation:MemoryRequirement" xmi:id="2169" id="2169"/>
+          <specifications xsi:type="org-fortiss-af3-safety-annotation:SafetyIntegrityLevel" xmi:id="2170" id="2170"/>
+          <connections xsi:type="org-fortiss-af3-component:Channel" xmi:id="2211" id="2211" name="ButtonLeftPressed" comment="" source="2145" target="2147">
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+          </connections>
+          <connections xsi:type="org-fortiss-af3-component:Channel" xmi:id="2212" id="2212" name="ButtonRightPressed" comment="" source="2140" target="2142">
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+          </connections>
+          <connections xsi:type="org-fortiss-af3-component:Channel" xmi:id="2189" id="2189" name="TURN_LEFT" comment="" source="2223" target="2187">
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+          </connections>
+          <connections xsi:type="org-fortiss-af3-component:Channel" xmi:id="2196" id="2196" name="TURN_RIGHT" comment="" source="2228" target="2194">
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+          </connections>
+          <connections xsi:type="org-fortiss-af3-component:Channel" xmi:id="2203" id="2203" name="ToggleLeft" comment="" source="2199" target="2517">
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+          </connections>
+          <connections xsi:type="org-fortiss-af3-component:Channel" xmi:id="2210" id="2210" name="ToggleRight" comment="" source="2206" target="2278">
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+          </connections>
+          <connections xsi:type="org-fortiss-af3-component:Channel" xmi:id="2584" id="2584" name="DIR" comment="" source="2580" target="2582">
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+          </connections>
+          <connections xsi:type="org-fortiss-af3-component:Channel" xmi:id="2591" id="2591" name="DIR" comment="" source="2587" target="2589">
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+          </connections>
+          <connections xsi:type="org-fortiss-af3-component:Channel" xmi:id="2624" id="2624" name="SPEED" comment="" source="2620" target="2622">
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+          </connections>
+          <connections xsi:type="org-fortiss-af3-component:Channel" xmi:id="2631" id="2631" name="SPEEDOut" comment="" source="2627" target="2634">
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+          </connections>
+          <connectors xsi:type="org-fortiss-af3-component:InputPort" xmi:id="2223" id="2223" name="TURN_LEFT" comment="" incoming="2225" outgoing="2189">
+            <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="2224" id="2224">
+              <type xsi:type="org-fortiss-af3-expression-types:TInt"/>
+              <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+            </specifications>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="96" y="252"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="1.2"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="48" orientation="WEST"/>
+          </connectors>
+          <connectors xsi:type="org-fortiss-af3-component:InputPort" xmi:id="2228" id="2228" name="TURN_RIGHT" comment="" incoming="2230" outgoing="2196">
+            <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="2229" id="2229">
+              <type xsi:type="org-fortiss-af3-expression-types:TInt"/>
+              <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+            </specifications>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="96" y="324"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="12" orientation="WEST"/>
+          </connectors>
+          <connectors xsi:type="org-fortiss-af3-component:OutputPort" xmi:id="2517" id="2517" name="ToggleLeft" comment="" incoming="2203" outgoing="2521">
+            <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="2518" id="2518">
+              <type xsi:type="org-fortiss-af3-expression-types:TBool"/>
+              <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+            </specifications>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="888" y="252"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="49" orientation="EAST"/>
+          </connectors>
+          <connectors xsi:type="org-fortiss-af3-component:OutputPort" xmi:id="2278" id="2278" name="ToggleRight" comment="" incoming="2210" outgoing="2282">
+            <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="2279" id="2279">
+              <type xsi:type="org-fortiss-af3-expression-types:TBool"/>
+              <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+            </specifications>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="888" y="324"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="4.000000000000001"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="24" orientation="EAST"/>
+          </connectors>
+          <connectors xsi:type="org-fortiss-af3-component:InputPort" xmi:id="2580" id="2580" name="DIR" comment="" incoming="2553" outgoing="2584">
+            <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="2581" id="2581">
+              <type xsi:type="org-fortiss-af3-expression-types:TDouble"/>
+              <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+            </specifications>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="96" y="72"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="84" orientation="WEST"/>
+          </connectors>
+          <connectors xsi:type="org-fortiss-af3-component:OutputPort" xmi:id="2589" id="2589" name="DIROut" comment="" incoming="2591">
+            <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="2590" id="2590">
+              <type xsi:type="org-fortiss-af3-expression-types:TDouble"/>
+              <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+            </specifications>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="540" y="72"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="108" orientation="EAST"/>
+          </connectors>
+          <connectors xsi:type="org-fortiss-af3-component:InputPort" xmi:id="2620" id="2620" name="SPEED" comment="" incoming="2602" outgoing="2624">
+            <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="2621" id="2621">
+              <type xsi:type="org-fortiss-af3-expression-types:TDouble"/>
+              <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+            </specifications>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="96" y="168"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="120" orientation="WEST"/>
+          </connectors>
+          <connectors xsi:type="org-fortiss-af3-component:OutputPort" xmi:id="2634" id="2634" name="SPEEDOut" comment="" incoming="2631">
+            <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="2635" id="2635">
+              <type xsi:type="org-fortiss-af3-expression-types:TDouble"/>
+              <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+            </specifications>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="540" y="168"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="1.0"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="133" orientation="EAST"/>
+          </connectors>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="156" y="12"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="216" height="181"/>
+        </containedElements>
+        <containedElements xsi:type="org-fortiss-af3-component:Component" xmi:id="2231" id="2231" name="Blinking Behavior" comment="">
+          <specifications xsi:type="org-fortiss-af3-component:CausalityComponentSpecification" xmi:id="2232" id="2232"/>
+          <specifications xsi:type="org-fortiss-af3-component:VerifBehaviourComponentSpecification" xmi:id="2233" id="2233"/>
+          <specifications xsi:type="org-fortiss-af3-component-annotation:MemoryRequirement" xmi:id="2234" id="2234"/>
+          <specifications xsi:type="org-fortiss-af3-safety-annotation:SafetyIntegrityLevel" xmi:id="2235" id="2235"/>
+          <connectors xsi:type="org-fortiss-af3-component:OutputPort" xmi:id="2302" id="2302" name="LEDRightOn" comment="" outgoing="2306">
+            <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="2303" id="2303">
+              <type xsi:type="org-fortiss-af3-expression-types:TBool"/>
+              <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+            </specifications>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="660" y="60"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="192"/>
+          </connectors>
+          <connectors xsi:type="org-fortiss-af3-component:OutputPort" xmi:id="2307" id="2307" name="LEDLeftOn" comment="" outgoing="2311">
+            <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="2308" id="2308">
+              <type xsi:type="org-fortiss-af3-expression-types:TBool"/>
+              <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+            </specifications>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="660" y="264"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Angle" key="cangle" angle="1.2"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="48" orientation="EAST"/>
+          </connectors>
+          <connectors xsi:type="org-fortiss-af3-component:InputPort" xmi:id="2280" id="2280" name="ToggleRight" comment="" incoming="2282">
+            <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="2281" id="2281">
+              <type xsi:type="org-fortiss-af3-expression-types:TBool"/>
+              <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+            </specifications>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="24" y="36"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="24" orientation="WEST"/>
+          </connectors>
+          <connectors xsi:type="org-fortiss-af3-component:InputPort" xmi:id="2522" id="2522" name="ToggleLeft" comment="" incoming="2521">
+            <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="2523" id="2523">
+              <type xsi:type="org-fortiss-af3-expression-types:TBool"/>
+              <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+            </specifications>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="12" y="252"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="49" orientation="WEST"/>
+          </connectors>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="468" y="12"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="216" height="181"/>
+        </containedElements>
+        <specifications xsi:type="org-fortiss-af3-component:CausalityComponentSpecification" xmi:id="10" id="10"/>
+        <specifications xsi:type="org-fortiss-af3-component:VerifBehaviourComponentSpecification" xmi:id="11" id="11"/>
+        <specifications xsi:type="org-fortiss-af3-safety-annotation:SafetyIntegrityLevel" xmi:id="12" id="12"/>
+        <specifications xsi:type="org-fortiss-af3-component-annotation:MemoryRequirement" xmi:id="13" id="13"/>
+        <connections xsi:type="org-fortiss-af3-component:Channel" xmi:id="498" id="498" name="ButtonA" comment="" source="2705" target="496">
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+        </connections>
+        <connections xsi:type="org-fortiss-af3-component:Channel" xmi:id="505" id="505" name="LEDWhite" comment="" source="501" target="503">
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+        </connections>
+        <connections xsi:type="org-fortiss-af3-component:Channel" xmi:id="591" id="591" name="ButtonB" comment="" source="2710" target="589">
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+        </connections>
+        <connections xsi:type="org-fortiss-af3-component:Channel" xmi:id="596" id="596" name="LEDRed" comment="" source="592" target="594">
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+        </connections>
+        <connections xsi:type="org-fortiss-af3-component:Channel" xmi:id="1088" id="1088" name="LED_LEFT" comment="" source="1084" target="2733">
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+        </connections>
+        <connections xsi:type="org-fortiss-af3-component:Channel" xmi:id="2225" id="2225" name="TURN_LEFT" comment="" source="2700" target="2223">
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+        </connections>
+        <connections xsi:type="org-fortiss-af3-component:Channel" xmi:id="2230" id="2230" name="TURN_RIGHT" comment="" source="2695" target="2228">
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+        </connections>
+        <connections xsi:type="org-fortiss-af3-component:Channel" xmi:id="2282" id="2282" name="ToggleRight" comment="" source="2278" target="2280">
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+        </connections>
+        <connections xsi:type="org-fortiss-af3-component:Channel" xmi:id="2306" id="2306" name="LEDRightOn" comment="" source="2302" target="2304">
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+        </connections>
+        <connections xsi:type="org-fortiss-af3-component:Channel" xmi:id="2311" id="2311" name="LEDLeftOn" comment="" source="2307" target="2309">
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+        </connections>
+        <connections xsi:type="org-fortiss-af3-component:Channel" xmi:id="2316" id="2316" name="LED_RIGHT" comment="" source="2312" target="2314">
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+        </connections>
+        <connections xsi:type="org-fortiss-af3-component:Channel" xmi:id="2521" id="2521" name="ToggleLeft" comment="" source="2517" target="2522">
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+        </connections>
+        <connections xsi:type="org-fortiss-af3-component:Channel" xmi:id="2553" id="2553" name="DIR" comment="" source="2730" target="2580">
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+        </connections>
+        <connections xsi:type="org-fortiss-af3-component:Channel" xmi:id="2602" id="2602" name="SPEED" comment="" source="2725" target="2620">
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+        </connections>
+        <connectors xsi:type="org-fortiss-af3-component:InputPort" xmi:id="2700" id="2700" name="TURN_LEFT" comment="" incoming="2702" outgoing="2225">
+          <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="2701" id="2701">
+            <type xsi:type="org-fortiss-af3-expression-types:TInt"/>
+            <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+          </specifications>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="24" y="60"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="60" orientation="WEST"/>
+        </connectors>
+        <connectors xsi:type="org-fortiss-af3-component:InputPort" xmi:id="2705" id="2705" name="ButtonA" comment="" incoming="2707" outgoing="498">
+          <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="2706" id="2706">
+            <type xsi:type="org-fortiss-af3-expression-types:TInt"/>
+            <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+          </specifications>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="24" y="228"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="108" orientation="WEST"/>
+        </connectors>
+        <connectors xsi:type="org-fortiss-af3-component:InputPort" xmi:id="2710" id="2710" name="ButtonB" comment="" incoming="2712" outgoing="591">
+          <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="2711" id="2711">
+            <type xsi:type="org-fortiss-af3-expression-types:TInt"/>
+            <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+          </specifications>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="24" y="300"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="144" orientation="WEST"/>
+        </connectors>
+        <connectors xsi:type="org-fortiss-af3-component:InputPort" xmi:id="2720" id="2720" name="ButtonC" comment="" incoming="2722">
+          <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="2721" id="2721">
+            <type xsi:type="org-fortiss-af3-expression-types:TInt"/>
+            <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+          </specifications>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="27" y="371"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="216" orientation="WEST"/>
+        </connectors>
+        <connectors xsi:type="org-fortiss-af3-component:InputPort" xmi:id="2695" id="2695" name="TURN_RIGHT" comment="" incoming="2697" outgoing="2230">
+          <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="2696" id="2696">
+            <type xsi:type="org-fortiss-af3-expression-types:TInt"/>
+            <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+          </specifications>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="24" y="24"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="24" orientation="WEST"/>
+        </connectors>
+        <connectors xsi:type="org-fortiss-af3-component:InputPort" xmi:id="2725" id="2725" name="SPEED" comment="" incoming="2727" outgoing="2602">
+          <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="2726" id="2726">
+            <type xsi:type="org-fortiss-af3-expression-types:TDouble"/>
+            <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+          </specifications>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="24" y="132"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="264" orientation="WEST"/>
+        </connectors>
+        <connectors xsi:type="org-fortiss-af3-component:InputPort" xmi:id="2730" id="2730" name="DIR" comment="" incoming="2732" outgoing="2553">
+          <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="2731" id="2731">
+            <type xsi:type="org-fortiss-af3-expression-types:TDouble"/>
+            <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+          </specifications>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="24" y="96"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="324" orientation="WEST"/>
+        </connectors>
+        <connectors xsi:type="org-fortiss-af3-component:InputPort" xmi:id="2715" id="2715" name="ButtonD" comment="" incoming="2717">
+          <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="2716" id="2716">
+            <type xsi:type="org-fortiss-af3-expression-types:TInt"/>
+            <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+          </specifications>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="27" y="419"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="180" orientation="WEST"/>
+        </connectors>
+        <connectors xsi:type="org-fortiss-af3-component:OutputPort" xmi:id="2733" id="2733" name="LED_LEFT" comment="" incoming="1088" outgoing="2737">
+          <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="2734" id="2734">
+            <type xsi:type="org-fortiss-af3-expression-types:TInt"/>
+            <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+          </specifications>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="1104" y="60"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="60" orientation="EAST"/>
+        </connectors>
+        <connectors xsi:type="org-fortiss-af3-component:OutputPort" xmi:id="2314" id="2314" name="LED_RIGHT" comment="" incoming="2316" outgoing="390">
+          <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="2315" id="2315">
+            <type xsi:type="org-fortiss-af3-expression-types:TInt"/>
+            <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+          </specifications>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="1104" y="12"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="228" orientation="EAST"/>
+        </connectors>
+        <connectors xsi:type="org-fortiss-af3-component:OutputPort" xmi:id="594" id="594" name="LEDRed" comment="" incoming="596" outgoing="478">
+          <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="595" id="595">
+            <type xsi:type="org-fortiss-af3-expression-types:TInt"/>
+            <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+          </specifications>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="468" y="300"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="108" orientation="EAST"/>
+        </connectors>
+        <connectors xsi:type="org-fortiss-af3-component:OutputPort" xmi:id="503" id="503" name="LEDWhite" comment="" incoming="505" outgoing="485">
+          <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="504" id="504">
+            <type xsi:type="org-fortiss-af3-expression-types:TInt"/>
+            <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+          </specifications>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="468" y="228"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="180" orientation="EAST"/>
+        </connectors>
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="432" y="12"/>
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="240" height="408"/>
+      </containedElements>
+      <containedElements xsi:type="org-fortiss-af3-component:Component" xmi:id="353" id="353" name="Input" comment="">
+        <specifications xsi:type="org-fortiss-af3-component:CausalityComponentSpecification" xmi:id="354" id="354"/>
+        <specifications xsi:type="org-fortiss-af3-component:VerifBehaviourComponentSpecification" xmi:id="355" id="355"/>
+        <specifications xsi:type="org-fortiss-af3-component-annotation:MemoryRequirement" xmi:id="356" id="356"/>
+        <specifications xsi:type="org-fortiss-af3-safety-annotation:SafetyIntegrityLevel" xmi:id="357" id="357"/>
+        <specifications xsi:type="org-fortiss-af3-operatorpanel:OperatorPanelSpecification" xmi:id="392" id="392" name="Operator Panel">
+          <containedElements xsi:type="org-fortiss-af3-operatorpanel:OPPushButton" xmi:id="466" id="466" name="Push Button2" comment="A">
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="300" y="60"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+            <onSelect stringRepresentation="ButtonA = 1">
+              <variable identifier="ButtonA"/>
+              <value xsi:type="org-fortiss-af3-expression-terms:IntConst" value="1"/>
+            </onSelect>
+          </containedElements>
+          <containedElements xsi:type="org-fortiss-af3-operatorpanel:OPPushButton" xmi:id="468" id="468" name="Push Button3" comment="B">
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="300" y="156"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+            <onSelect stringRepresentation="ButtonB = 1">
+              <variable identifier="ButtonB"/>
+              <value xsi:type="org-fortiss-af3-expression-terms:IntConst" value="1"/>
+            </onSelect>
+          </containedElements>
+          <containedElements xsi:type="org-fortiss-af3-operatorpanel:OPPushButton" xmi:id="469" id="469" name="Push Button4" comment="C">
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="300" y="252"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+            <onSelect stringRepresentation="ButtonC = 1">
+              <variable identifier="ButtonC"/>
+              <value xsi:type="org-fortiss-af3-expression-terms:IntConst" value="1"/>
+            </onSelect>
+          </containedElements>
+          <containedElements xsi:type="org-fortiss-af3-operatorpanel:OPPushButton" xmi:id="470" id="470" name="Push Button5" comment="D">
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="300" y="348"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+            <onSelect stringRepresentation="ButtonD = 1">
+              <variable identifier="ButtonD"/>
+              <value xsi:type="org-fortiss-af3-expression-terms:IntConst" value="1"/>
+            </onSelect>
+          </containedElements>
+          <containedElements xsi:type="org-fortiss-af3-operatorpanel:OPToggleButton" xmi:id="870" id="870" name="Toggle Left" comment="Toggle Left" stateType="true">
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="36" y="144"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="169" height="72"/>
+            <onSelect stringRepresentation="TURN_LEFT=1">
+              <variable identifier="TURN_LEFT"/>
+              <value xsi:type="org-fortiss-af3-expression-terms:IntConst" value="1"/>
+            </onSelect>
+            <onDeselect stringRepresentation="TURN_LEFT=0">
+              <variable identifier="TURN_LEFT"/>
+              <value xsi:type="org-fortiss-af3-expression-terms:IntConst"/>
+            </onDeselect>
+          </containedElements>
+          <containedElements xsi:type="org-fortiss-af3-operatorpanel:OPToggleButton" xmi:id="988" id="988" name="Toggle Button" comment="Toggle Right" stateType="true">
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="36" y="252"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="169" height="72"/>
+            <onSelect stringRepresentation="TURN_RIGHT = 1">
+              <variable identifier="TURN_RIGHT"/>
+              <value xsi:type="org-fortiss-af3-expression-terms:IntConst" value="1"/>
+            </onSelect>
+            <onDeselect stringRepresentation="TURN_RIGHT = 0">
+              <variable identifier="TURN_RIGHT"/>
+              <value xsi:type="org-fortiss-af3-expression-terms:IntConst"/>
+            </onDeselect>
+          </containedElements>
+          <containedElements xsi:type="org-fortiss-af3-operatorpanel:OPAreaInput" xmi:id="2343" id="2343" name="DIR">
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="576" y="240"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+            <output stringRepresentation="DIR = -(_this_X - 2.4)">
+              <variable identifier="DIR"/>
+              <value xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="Negate"/>
+                <arguments xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                  <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="Subtract"/>
+                  <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="_this_X"/>
+                  <arguments xsi:type="org-fortiss-af3-expression-terms:DoubleConst" value="2.4"/>
+                </arguments>
+              </value>
+            </output>
+            <type xsi:type="org-fortiss-af3-expression-types:TInt"/>
+          </containedElements>
+          <containedElements xsi:type="org-fortiss-af3-operatorpanel:OPAreaInput" xmi:id="2653" id="2653" name="SPEED">
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="612" y="72"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+            <output stringRepresentation="SPEED = _this_X">
+              <variable identifier="SPEED"/>
+              <value xsi:type="org-fortiss-af3-expression-terms:Var" identifier="_this_X"/>
+            </output>
+            <type xsi:type="org-fortiss-af3-expression-types:TInt"/>
+          </containedElements>
+        </specifications>
+        <connectors xsi:type="org-fortiss-af3-component:OutputPort" xmi:id="2698" id="2698" name="TURN_LEFT" comment="" outgoing="2702">
+          <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="2699" id="2699">
+            <type xsi:type="org-fortiss-af3-expression-types:TInt"/>
+            <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+          </specifications>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="60" orientation="EAST"/>
+        </connectors>
+        <connectors xsi:type="org-fortiss-af3-component:OutputPort" xmi:id="2693" id="2693" name="TURN_RIGHT" comment="" outgoing="2697">
+          <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="2694" id="2694">
+            <type xsi:type="org-fortiss-af3-expression-types:TInt"/>
+            <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+          </specifications>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="24" orientation="EAST"/>
+        </connectors>
+        <connectors xsi:type="org-fortiss-af3-component:OutputPort" xmi:id="2703" id="2703" name="ButtonA" comment="" outgoing="2707">
+          <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="2704" id="2704">
+            <type xsi:type="org-fortiss-af3-expression-types:TInt"/>
+            <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+          </specifications>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="108" orientation="EAST"/>
+        </connectors>
+        <connectors xsi:type="org-fortiss-af3-component:OutputPort" xmi:id="2708" id="2708" name="ButtonB" comment="" outgoing="2712">
+          <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="2709" id="2709">
+            <type xsi:type="org-fortiss-af3-expression-types:TInt"/>
+            <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+          </specifications>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="144" orientation="EAST"/>
+        </connectors>
+        <connectors xsi:type="org-fortiss-af3-component:OutputPort" xmi:id="2718" id="2718" name="ButtonC" comment="" outgoing="2722">
+          <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="2719" id="2719">
+            <type xsi:type="org-fortiss-af3-expression-types:TInt"/>
+            <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+          </specifications>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="216" orientation="EAST"/>
+        </connectors>
+        <connectors xsi:type="org-fortiss-af3-component:OutputPort" xmi:id="2713" id="2713" name="ButtonD" comment="" outgoing="2717">
+          <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="2714" id="2714">
+            <type xsi:type="org-fortiss-af3-expression-types:TInt"/>
+            <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+          </specifications>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="180" orientation="EAST"/>
+        </connectors>
+        <connectors xsi:type="org-fortiss-af3-component:OutputPort" xmi:id="2728" id="2728" name="DIR" comment="" outgoing="2732">
+          <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="2729" id="2729">
+            <type xsi:type="org-fortiss-af3-expression-types:TDouble"/>
+            <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+          </specifications>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="324" orientation="EAST"/>
+        </connectors>
+        <connectors xsi:type="org-fortiss-af3-component:OutputPort" xmi:id="2723" id="2723" name="SPEED" comment="" outgoing="2727">
+          <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="2724" id="2724">
+            <type xsi:type="org-fortiss-af3-expression-types:TDouble"/>
+            <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+          </specifications>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="264" orientation="EAST"/>
+        </connectors>
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="12" y="12"/>
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="216" height="409"/>
+      </containedElements>
+      <containedElements xsi:type="org-fortiss-af3-component:Component" xmi:id="358" id="358" name="Output" comment="">
+        <specifications xsi:type="org-fortiss-af3-component:CausalityComponentSpecification" xmi:id="359" id="359"/>
+        <specifications xsi:type="org-fortiss-af3-component:VerifBehaviourComponentSpecification" xmi:id="360" id="360"/>
+        <specifications xsi:type="org-fortiss-af3-component-annotation:MemoryRequirement" xmi:id="361" id="361"/>
+        <specifications xsi:type="org-fortiss-af3-safety-annotation:SafetyIntegrityLevel" xmi:id="362" id="362"/>
+        <specifications xsi:type="org-fortiss-af3-operatorpanel:OperatorPanelSpecification" xmi:id="391" id="391" name="Operator Panel">
+          <containedElements xsi:type="org-fortiss-af3-operatorpanel:OPColorDisplay" xmi:id="395" id="395" name="Left Display">
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="36" y="24"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+            <reactions red="255" green="128">
+              <guard stringRepresentation="LED_LEFT == 1">
+                <expression xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                  <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="Equal"/>
+                  <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="LED_LEFT"/>
+                  <arguments xsi:type="org-fortiss-af3-expression-terms:IntConst" value="1"/>
+                </expression>
+              </guard>
+            </reactions>
+            <reactions>
+              <guard stringRepresentation="true">
+                <expression xsi:type="org-fortiss-af3-expression-terms:BoolConst" value="true"/>
+              </guard>
+            </reactions>
+          </containedElements>
+          <containedElements xsi:type="org-fortiss-af3-operatorpanel:OPColorDisplay" xmi:id="397" id="397" name="Right Display">
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="168" y="24"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+            <reactions red="255" green="128">
+              <guard stringRepresentation="LEDRight == 1">
+                <expression xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                  <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="Equal"/>
+                  <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="LEDRight"/>
+                  <arguments xsi:type="org-fortiss-af3-expression-terms:IntConst" value="1"/>
+                </expression>
+              </guard>
+            </reactions>
+            <reactions>
+              <guard stringRepresentation="true">
+                <expression xsi:type="org-fortiss-af3-expression-terms:BoolConst" value="true"/>
+              </guard>
+            </reactions>
+          </containedElements>
+          <containedElements xsi:type="org-fortiss-af3-operatorpanel:OPColorDisplay" xmi:id="471" id="471" name="White Display">
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="36" y="216"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+            <reactions red="255" green="255" blue="255">
+              <guard stringRepresentation="LEDWhite == 1">
+                <expression xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                  <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="Equal"/>
+                  <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="LEDWhite"/>
+                  <arguments xsi:type="org-fortiss-af3-expression-terms:IntConst" value="1"/>
+                </expression>
+              </guard>
+            </reactions>
+            <reactions>
+              <guard stringRepresentation="true">
+                <expression xsi:type="org-fortiss-af3-expression-terms:BoolConst" value="true"/>
+              </guard>
+            </reactions>
+          </containedElements>
+          <containedElements xsi:type="org-fortiss-af3-operatorpanel:OPColorDisplay" xmi:id="486" id="486" name="Red Display">
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="168" y="216"/>
+            <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+            <reactions red="255">
+              <guard stringRepresentation="LEDRed == 1">
+                <expression xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+                  <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="Equal"/>
+                  <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="LEDRed"/>
+                  <arguments xsi:type="org-fortiss-af3-expression-terms:IntConst" value="1"/>
+                </expression>
+              </guard>
+            </reactions>
+            <reactions>
+              <guard stringRepresentation="true">
+                <expression xsi:type="org-fortiss-af3-expression-terms:BoolConst" value="true"/>
+              </guard>
+            </reactions>
+          </containedElements>
+        </specifications>
+        <connectors xsi:type="org-fortiss-af3-component:InputPort" xmi:id="2735" id="2735" name="LED_LEFT" comment="" incoming="2737">
+          <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="2736" id="2736">
+            <type xsi:type="org-fortiss-af3-expression-types:TInt"/>
+            <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+          </specifications>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="36" orientation="WEST"/>
+        </connectors>
+        <connectors xsi:type="org-fortiss-af3-component:InputPort" xmi:id="388" id="388" name="LEDRight" comment="" incoming="390">
+          <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="389" id="389">
+            <type xsi:type="org-fortiss-af3-expression-types:TInt"/>
+            <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+          </specifications>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="204" orientation="WEST"/>
+        </connectors>
+        <connectors xsi:type="org-fortiss-af3-component:InputPort" xmi:id="476" id="476" name="LEDRed" comment="" incoming="478">
+          <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="477" id="477">
+            <type xsi:type="org-fortiss-af3-expression-types:TInt"/>
+            <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+          </specifications>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="84" orientation="WEST"/>
+        </connectors>
+        <connectors xsi:type="org-fortiss-af3-component:InputPort" xmi:id="483" id="483" name="LEDWhite" comment="" incoming="485">
+          <specifications xsi:type="org-fortiss-af3-component:PortSpecification" xmi:id="484" id="484">
+            <type xsi:type="org-fortiss-af3-expression-types:TInt"/>
+            <initialValue xsi:type="org-fortiss-af3-expression-terms:DefinedConst" value="NoVal"/>
+          </specifications>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+          <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="156" orientation="WEST"/>
+        </connectors>
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="828" y="36"/>
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="216" height="385"/>
+      </containedElements>
+      <specifications xsi:type="org-fortiss-af3-component:CausalityComponentSpecification" xmi:id="7" id="7"/>
+      <specifications xsi:type="org-fortiss-af3-component:VerifBehaviourComponentSpecification" xmi:id="8" id="8"/>
+      <specifications xsi:type="org-fortiss-af3-component-annotation:MemoryRequirement" xmi:id="47" id="47"/>
+      <specifications xsi:type="org-fortiss-af3-safety-annotation:SafetyIntegrityLevel" xmi:id="48" id="48"/>
+      <connections xsi:type="org-fortiss-af3-component:Channel" xmi:id="390" id="390" name="LEDRight" comment="" source="2314" target="388">
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+      </connections>
+      <connections xsi:type="org-fortiss-af3-component:Channel" xmi:id="478" id="478" name="LEDRed" comment="" source="594" target="476">
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+      </connections>
+      <connections xsi:type="org-fortiss-af3-component:Channel" xmi:id="485" id="485" name="LEDWhite" comment="" source="503" target="483">
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points">
+          <points x="816" y="204"/>
+        </layoutData>
+      </connections>
+      <connections xsi:type="org-fortiss-af3-component:Channel" xmi:id="2697" id="2697" name="TURN_RIGHT" comment="" source="2693" target="2695">
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+      </connections>
+      <connections xsi:type="org-fortiss-af3-component:Channel" xmi:id="2702" id="2702" name="TURN_LEFT" comment="" source="2698" target="2700">
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+      </connections>
+      <connections xsi:type="org-fortiss-af3-component:Channel" xmi:id="2707" id="2707" name="ButtonA" comment="" source="2703" target="2705">
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+      </connections>
+      <connections xsi:type="org-fortiss-af3-component:Channel" xmi:id="2712" id="2712" name="ButtonB" comment="" source="2708" target="2710">
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+      </connections>
+      <connections xsi:type="org-fortiss-af3-component:Channel" xmi:id="2717" id="2717" name="ButtonD" comment="" source="2713" target="2715">
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+      </connections>
+      <connections xsi:type="org-fortiss-af3-component:Channel" xmi:id="2722" id="2722" name="ButtonC" comment="" source="2718" target="2720">
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+      </connections>
+      <connections xsi:type="org-fortiss-af3-component:Channel" xmi:id="2727" id="2727" name="SPEED" comment="" source="2723" target="2725">
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+      </connections>
+      <connections xsi:type="org-fortiss-af3-component:Channel" xmi:id="2732" id="2732" name="DIR" comment="" source="2728" target="2730">
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+      </connections>
+      <connections xsi:type="org-fortiss-af3-component:Channel" xmi:id="2737" id="2737" name="LED_LEFT" comment="" source="2733" target="2735">
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Points" key="points"/>
+      </connections>
+      <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+      <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="216" height="72"/>
+    </containedElements>
+    <specifications xsi:type="org-fortiss-af3-safety-annotation:SafetyIntegrityLevel" xmi:id="49" id="49"/>
+  </rootElements>
+  <rootElements xsi:type="org-fortiss-af3-platform:PlatformArchitecture" xmi:id="14" id="14" name="Technical Viewpoint" comment="">
+    <containedElements xsi:type="org-fortiss-af3-platform-raspberry:RaspberryPi" xmi:id="15" id="15" name="Models Conference Board" canCoordinationID="255" ipAddress="192.168.21.242" coordinatorUnit="true" cycleTime="100">
+      <specifications xsi:type="org-fortiss-af3-platform-annotation:HardwareCost" xmi:id="29" id="29"/>
+      <connectors xsi:type="org-fortiss-af3-platform-modelsconference:Button" xmi:id="16" id="16" name="ButtonLeft" uid="BTN_LFT">
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="36" orientation="WEST"/>
+      </connectors>
+      <connectors xsi:type="org-fortiss-af3-platform-modelsconference:Button" xmi:id="17" id="17" name="ButtonRight" uid="BTN_RGHT">
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="36" orientation="EAST"/>
+      </connectors>
+      <connectors xsi:type="org-fortiss-af3-platform-modelsconference:Button" xmi:id="18" id="18" name="ButtonA" uid="BTN_A">
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="120" orientation="EAST"/>
+      </connectors>
+      <connectors xsi:type="org-fortiss-af3-platform-modelsconference:Button" xmi:id="19" id="19" name="ButtonB" uid="BTN_B">
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="156" orientation="EAST"/>
+      </connectors>
+      <connectors xsi:type="org-fortiss-af3-platform-modelsconference:Button" xmi:id="20" id="20" name="ButtonC" uid="BTN_C">
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="192" orientation="EAST"/>
+      </connectors>
+      <connectors xsi:type="org-fortiss-af3-platform-modelsconference:Button" xmi:id="21" id="21" name="ButtonD" uid="BTN_D">
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="228" orientation="EAST"/>
+      </connectors>
+      <connectors xsi:type="org-fortiss-af3-platform-modelsconference:LED" xmi:id="23" id="23" name="LEDLeft" uid="LED_LFT">
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="54" orientation="WEST"/>
+      </connectors>
+      <connectors xsi:type="org-fortiss-af3-platform-modelsconference:LED" xmi:id="24" id="24" name="LEDRight" uid="LED_RGHT">
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="54" orientation="EAST"/>
+      </connectors>
+      <connectors xsi:type="org-fortiss-af3-platform-modelsconference:LED" xmi:id="25" id="25" name="LEDRed" uid="LED_RED">
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="36" orientation="SOUTH"/>
+      </connectors>
+      <connectors xsi:type="org-fortiss-af3-platform-modelsconference:LED" xmi:id="26" id="26" name="LEDWhite" uid="LED_WHT">
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="192" orientation="SOUTH"/>
+      </connectors>
+      <connectors xsi:type="org-fortiss-af3-platform-modelsconference:Poti" xmi:id="27" id="27" name="PotiLeft" uid="POTI_LFT">
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="324" orientation="WEST"/>
+      </connectors>
+      <connectors xsi:type="org-fortiss-af3-platform-modelsconference:Poti" xmi:id="28" id="28" name="PotiRight" uid="POTI_RGHT">
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos"/>
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="108" height="72"/>
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="cpos"/>
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="cdim" width="0" height="0"/>
+        <layoutData xsi:type="org-fortiss-tooling-base-model-layout:OffsetOrientation" key="coffsetorient" offset="324" orientation="EAST"/>
+      </connectors>
+      <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Point" key="pos" x="288" y="12"/>
+      <layoutData xsi:type="org-fortiss-tooling-base-model-layout:Dimension" key="dim" width="320" height="400"/>
+    </containedElements>
+  </rootElements>
+  <rootElements xsi:type="org-fortiss-af3-project-execution:ExecutionConfigurationStore" xmi:id="101" id="101">
+    <configurations xmi:id="102" id="102" name="Execonf" comment="" idReference="60"/>
+    <configurations xmi:id="2595" id="2595" name="Component Architecture" comment="" idReference="5"/>
+    <configurations xmi:id="2692" id="2692" name="Deployment" comment="" idReference="2656"/>
+  </rootElements>
+  <rootElements xsi:type="org-fortiss-af3-expression:DataDictionary" xmi:id="611" id="611">
+    <functions xmi:id="2531" id="2531">
+      <function xmi:id="2532" id="2532" name="TurningRight"/>
+      <parameters>
+        <variable identifier="_V"/>
+        <type xsi:type="org-fortiss-af3-expression-types:TDouble"/>
+      </parameters>
+      <definition>
+        <statements xsi:type="org-fortiss-af3-expression-terms-imperative:Return">
+          <value xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+            <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="LowerThan"/>
+            <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="_V"/>
+            <arguments xsi:type="org-fortiss-af3-expression-terms:IntConst" value="2"/>
+          </value>
+        </statements>
+      </definition>
+      <returnType xsi:type="org-fortiss-af3-expression-types:TBool"/>
+    </functions>
+    <functions xmi:id="2537" id="2537">
+      <function xmi:id="2538" id="2538" name="TurningLeft"/>
+      <parameters>
+        <variable identifier="_V"/>
+        <type xsi:type="org-fortiss-af3-expression-types:TDouble"/>
+      </parameters>
+      <definition>
+        <statements xsi:type="org-fortiss-af3-expression-terms-imperative:Return">
+          <value xsi:type="org-fortiss-af3-expression-terms:FunctionCall">
+            <function xsi:type="org-fortiss-af3-expression-terms:PredefinedFunction" operator="GreaterEqual"/>
+            <arguments xsi:type="org-fortiss-af3-expression-terms:Var" identifier="_V"/>
+            <arguments xsi:type="org-fortiss-af3-expression-terms:IntConst" value="2"/>
+          </value>
+        </statements>
+      </definition>
+      <returnType xsi:type="org-fortiss-af3-expression-types:TBool"/>
+    </functions>
+  </rootElements>
+  <rootElements xsi:type="org-fortiss-af3-mira:Analysis" xmi:id="1135" id="1135" name="Requirements Viewpoint">
+    <containedElements xsi:type="org-fortiss-af3-mira:RequirementsContainer" xmi:id="75" id="75" name="Requirements" comment="">
+      <containedElements xsi:type="org-fortiss-af3-mira:Requirement" xmi:id="76" id="76" name="Activate right blinker" description="If the right blinker is not activated, pressing (and releasing) the TURN_RIGHT button shall activate it." author="Hernan Ponce de Leon" priority="Normal - Satisfier" reqId="1.4">
+        <specifications xsi:type="org-fortiss-af3-mira-verification:CheckList" xmi:id="77" id="77" name="" comment="">
+          <items xmi:id="78" id="78" name="unambiguous"/>
+          <items xmi:id="79" id="79" name="verifiable"/>
+          <items xmi:id="80" id="80" name="non-conflicting"/>
+        </specifications>
+        <specifications xsi:type="org-fortiss-af3-safety-annotation:SafetyIntegrityLevel" xmi:id="1137" id="1137"/>
+        <connectors xsi:type="org-fortiss-af3-mira:RequirementConnector"/>
+        <images xmi:id="89" id="89" uri="Images/board.png"/>
+      </containedElements>
+      <containedElements xsi:type="org-fortiss-af3-mira:Requirement" xmi:id="84" id="84" name="Manual deactivation left blinker" description="If the left blinker is activated, pressing (and releasing) either the TURN_LEFT or TURN_RIGHT button shall deactivate it." author="Hernan Ponce de Leon" priority="Normal - Satisfier" reqId="1.5">
+        <specifications xsi:type="org-fortiss-af3-mira-verification:CheckList" xmi:id="85" id="85" name="" comment="">
+          <items xmi:id="86" id="86" name="unambiguous"/>
+          <items xmi:id="87" id="87" name="verifiable"/>
+          <items xmi:id="88" id="88" name="non-conflicting"/>
+        </specifications>
+        <specifications xsi:type="org-fortiss-af3-safety-annotation:SafetyIntegrityLevel" xmi:id="1138" id="1138"/>
+        <connectors xsi:type="org-fortiss-af3-mira:RequirementConnector"/>
+        <images xmi:id="83" id="83" uri="Images/board.png"/>
+      </containedElements>
+      <containedElements xsi:type="org-fortiss-af3-mira:Requirement" xmi:id="90" id="90" name="Breaking light" description="If the breaking value (SPEED) is positive, LED_RED should be activated." author="Hernan Ponce de Leon" priority="Normal - Satisfier" reqId="3.1">
+        <specifications xsi:type="org-fortiss-af3-mira-verification:CheckList" xmi:id="91" id="91" name="" comment="">
+          <items xmi:id="92" id="92" name="unambiguous"/>
+          <items xmi:id="93" id="93" name="verifiable"/>
+          <items xmi:id="94" id="94" name="non-conflicting"/>
+        </specifications>
+        <specifications xsi:type="org-fortiss-af3-safety-annotation:SafetyIntegrityLevel" xmi:id="1139" id="1139"/>
+        <connectors xsi:type="org-fortiss-af3-mira:RequirementConnector"/>
+        <images xmi:id="169" id="169" uri="Images/board2.png"/>
+      </containedElements>
+      <containedElements xsi:type="org-fortiss-af3-mira:Requirement" xmi:id="107" id="107" name="Automatic deactivation left blinker" description="If the left blinker is activated, after finishing a turn to the left using DIR,  the left blinker should be deactivated." author="Hernan Ponce de Leon" priority="Normal - Satisfier" reqId="2.1">
+        <specifications xsi:type="org-fortiss-af3-mira-verification:CheckList" xmi:id="108" id="108" name="" comment="">
+          <items xmi:id="109" id="109" name="unambiguous"/>
+          <items xmi:id="110" id="110" name="verifiable"/>
+          <items xmi:id="111" id="111" name="non-conflicting"/>
+        </specifications>
+        <specifications xsi:type="org-fortiss-af3-safety-annotation:SafetyIntegrityLevel" xmi:id="1140" id="1140"/>
+        <connectors xsi:type="org-fortiss-af3-mira:RequirementConnector"/>
+        <images xmi:id="112" id="112" uri="Images/board.png"/>
+      </containedElements>
+      <containedElements xsi:type="org-fortiss-af3-mira:Requirement" xmi:id="113" id="113" name="Unique blinker" description="Both left blinker and right blinker shall not be activated simultaneously." author="Hernan Ponce de Leon" priority="Normal - Satisfier" reqId="1.7">
+        <specifications xsi:type="org-fortiss-af3-mira-verification:CheckList" xmi:id="114" id="114" name="" comment="">
+          <items xmi:id="115" id="115" name="unambiguous"/>
+          <items xmi:id="116" id="116" name="verifiable"/>
+          <items xmi:id="117" id="117" name="non-conflicting"/>
+        </specifications>
+        <specifications xsi:type="org-fortiss-af3-safety-annotation:SafetyIntegrityLevel" xmi:id="1141" id="1141"/>
+        <connectors xsi:type="org-fortiss-af3-mira:RequirementConnector"/>
+        <images xmi:id="118" id="118" uri="Images/board.png"/>
+      </containedElements>
+      <containedElements xsi:type="org-fortiss-af3-mira:Requirement" xmi:id="137" id="137" name="LED_LEFT for left blinker" description="LED_LEFT shall be used to implement a left blinker.&#xA;As long as the left blinker is activated, the LED_LEFT should be on for 5 ticks, off for 5 ticks, and so on." author="Hernan Ponce de Leon" priority="Normal - Satisfier" reqId="1.1">
+        <specifications xsi:type="org-fortiss-af3-mira-verification:CheckList" xmi:id="138" id="138" name="" comment="">
+          <items xmi:id="139" id="139" name="unambiguous"/>
+          <items xmi:id="140" id="140" name="verifiable"/>
+          <items xmi:id="141" id="141" name="non-conflicting"/>
+        </specifications>
+        <specifications xsi:type="org-fortiss-af3-safety-annotation:SafetyIntegrityLevel" xmi:id="1142" id="1142"/>
+        <connectors xsi:type="org-fortiss-af3-mira:RequirementConnector"/>
+        <images xmi:id="142" id="142" uri="Images/board.png"/>
+      </containedElements>
+      <containedElements xsi:type="org-fortiss-af3-mira:Requirement" xmi:id="143" id="143" name="LED_RIGHT for right blinker" description="LED_RIGHT shall be used to implement a right blinker.&#xA;As long as the right blinker is activated, the LED_RIGHT should be on for 5 ticks, off for 5 ticks, and so on." author="Hernan Ponce de Leon" priority="Normal - Satisfier" reqId="1.2">
+        <specifications xsi:type="org-fortiss-af3-mira-verification:CheckList" xmi:id="144" id="144" name="" comment="">
+          <items xmi:id="145" id="145" name="unambiguous"/>
+          <items xmi:id="146" id="146" name="verifiable"/>
+          <items xmi:id="147" id="147" name="non-conflicting"/>
+        </specifications>
+        <specifications xsi:type="org-fortiss-af3-safety-annotation:SafetyIntegrityLevel" xmi:id="1143" id="1143"/>
+        <connectors xsi:type="org-fortiss-af3-mira:RequirementConnector"/>
+        <images xmi:id="148" id="148" uri="Images/board.png"/>
+      </containedElements>
+      <containedElements xsi:type="org-fortiss-af3-mira:Requirement" xmi:id="149" id="149" name="Activate left blinker" description="If the left blinker is not activated, pressing (and releasing) the TURN_LEFT button shall activate it." author="Hernan Ponce de Leon" priority="Normal - Satisfier" reqId="1.3">
+        <specifications xsi:type="org-fortiss-af3-mira-verification:CheckList" xmi:id="150" id="150" name="" comment="">
+          <items xmi:id="151" id="151" name="unambiguous"/>
+          <items xmi:id="152" id="152" name="verifiable"/>
+          <items xmi:id="153" id="153" name="non-conflicting"/>
+        </specifications>
+        <specifications xsi:type="org-fortiss-af3-safety-annotation:SafetyIntegrityLevel" xmi:id="1144" id="1144"/>
+        <connectors xsi:type="org-fortiss-af3-mira:RequirementConnector"/>
+        <images xmi:id="154" id="154" uri="Images/board.png"/>
+      </containedElements>
+      <containedElements xsi:type="org-fortiss-af3-mira:Requirement" xmi:id="155" id="155" name="Manual deactivation right blinker" description="If the right blinker is activated, pressing (and releasing) either the TURN_LEFT or TURN_RIGHT button shall deactivate it." author="Hernan Ponce de Leon" priority="Normal - Satisfier" reqId="1.6">
+        <specifications xsi:type="org-fortiss-af3-mira-verification:CheckList" xmi:id="156" id="156" name="" comment="">
+          <items xmi:id="157" id="157" name="unambiguous"/>
+          <items xmi:id="158" id="158" name="verifiable"/>
+          <items xmi:id="159" id="159" name="non-conflicting"/>
+        </specifications>
+        <specifications xsi:type="org-fortiss-af3-safety-annotation:SafetyIntegrityLevel" xmi:id="1145" id="1145"/>
+        <connectors xsi:type="org-fortiss-af3-mira:RequirementConnector"/>
+        <images xmi:id="160" id="160" uri="Images/board.png"/>
+      </containedElements>
+      <containedElements xsi:type="org-fortiss-af3-mira:Requirement" xmi:id="161" id="161" name="Automatic deactivation right blinker" description="If the right blinker is activated, after finishing a turn to the right using DIR,  the right blinker should be deactivated." author="Hernan Ponce de Leon" priority="Normal - Satisfier" reqId="2.2">
+        <specifications xsi:type="org-fortiss-af3-mira-verification:CheckList" xmi:id="162" id="162" name="" comment="">
+          <items xmi:id="163" id="163" name="unambiguous"/>
+          <items xmi:id="164" id="164" name="verifiable"/>
+          <items xmi:id="165" id="165" name="non-conflicting"/>
+        </specifications>
+        <specifications xsi:type="org-fortiss-af3-safety-annotation:SafetyIntegrityLevel" xmi:id="1146" id="1146"/>
+        <connectors xsi:type="org-fortiss-af3-mira:RequirementConnector"/>
+        <images xmi:id="170" id="170" uri="Images/board.png"/>
+      </containedElements>
+      <specifications xsi:type="org-fortiss-af3-safety-annotation:SafetyIntegrityLevel" xmi:id="1147" id="1147"/>
+    </containedElements>
+    <specifications xsi:type="org-fortiss-af3-safety-annotation:SafetyIntegrityLevel" xmi:id="1148" id="1148"/>
+    <requirementRelationStatus xmi:id="1136" id="1136" name="New" comment=""/>
+    <requirementRelationStatus xmi:id="73" id="73" name="In Analysis" comment=""/>
+    <requirementRelationStatus xmi:id="74" id="74" name="Analyzed" comment=""/>
+  </rootElements>
+  <rootElements xsi:type="org-fortiss-af3-allocation:AllocationTableCollection" xmi:id="2738" id="2738" name="Allocations (migrated from Deployment)">
+    <containedElements xsi:type="org-fortiss-af3-platform-allocation:ComponentToExecutionUnitAllocationTable" xmi:id="2739" id="2739" name="Components → Hardware (migrated from Deployment)" sourceView="5" targetView="14">
+      <containedElements xsi:type="org-fortiss-af3-platform-allocation:ComponentToExecutionUnitAllocationEntry" sourceElements="9" targetElement="15"/>
+      <containedElements xsi:type="org-fortiss-af3-platform-allocation:InputPortToReceiverAllocationEntry" sourceElements="2700" targetElement="16"/>
+      <containedElements xsi:type="org-fortiss-af3-platform-allocation:InputPortToReceiverAllocationEntry" sourceElements="2695" targetElement="17"/>
+      <containedElements xsi:type="org-fortiss-af3-platform-allocation:InputPortToReceiverAllocationEntry" sourceElements="2705" targetElement="18"/>
+      <containedElements xsi:type="org-fortiss-af3-platform-allocation:InputPortToReceiverAllocationEntry" sourceElements="2710" targetElement="19"/>
+      <containedElements xsi:type="org-fortiss-af3-platform-allocation:InputPortToReceiverAllocationEntry" sourceElements="2720" targetElement="20"/>
+      <containedElements xsi:type="org-fortiss-af3-platform-allocation:InputPortToReceiverAllocationEntry" sourceElements="2715" targetElement="21"/>
+      <containedElements xsi:type="org-fortiss-af3-platform-allocation:InputPortToReceiverAllocationEntry" sourceElements="2725" targetElement="27"/>
+      <containedElements xsi:type="org-fortiss-af3-platform-allocation:InputPortToReceiverAllocationEntry" sourceElements="2730" targetElement="28"/>
+      <containedElements xsi:type="org-fortiss-af3-platform-allocation:OutputPortToTransmitterAllocationEntry" sourceElements="2733" targetElement="23"/>
+      <containedElements xsi:type="org-fortiss-af3-platform-allocation:OutputPortToTransmitterAllocationEntry" sourceElements="2314" targetElement="24"/>
+      <containedElements xsi:type="org-fortiss-af3-platform-allocation:OutputPortToTransmitterAllocationEntry" sourceElements="594" targetElement="25"/>
+      <containedElements xsi:type="org-fortiss-af3-platform-allocation:OutputPortToTransmitterAllocationEntry" sourceElements="503" targetElement="26"/>
+    </containedElements>
+  </rootElements>
+</org-fortiss-af3-project:FileProject>

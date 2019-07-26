@@ -1,0 +1,12 @@
+<launch>
+    <master auto="start"/>
+    <include file="$(find redrover_2dnav)/redrover_configuration.launch" />
+
+    <param name="tvc/limit/velocity" value="0.55" />
+    <param name="map_resolution" value="0.010"/>
+    
+    <node name="plotter" pkg="plotter" type="main.py"/>
+    <node name="navigator" pkg="navigator" type="navigator" output="screen"/>
+    <node name="brick_laser_range_finder" pkg="brick_laser_range_finder" type="brick_laser_range_finder" />
+    <node name="brick_imu" pkg="brick_imu" type="brick_imu" />
+</launch>

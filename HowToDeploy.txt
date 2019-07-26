@@ -1,0 +1,53 @@
+General:
+
+- Your computer should be connected to the wifi FF1RoadNet:
+	Router IP address: 192.168.1.1
+	Password: fortisspi
+
+- Based on the color of their frame, the 5 rovers at our disposal are assigned the following names:  bluerover, blackrover, whiterover, orangerover, redrover.
+
+- In the following instructions, please replace <rovername> with the name of the rover you want to deploy on.
+
+- For Windows users: You might not be able to use the rover names. There are two possible options:
+	1) use the corresponding IP address. These are given at the end of this file.
+	2) google for MDNS support on windows. You might have to install some software to support it.
+
+Generate Code:
+- In af3:
+	- open the model for which you want the generated code to be deployed
+	- expand the node "Allocations"
+	- from "Components -> Hardware", right-click and select "Run Bare Metal Generator"
+	- save in the folder "AF3-Project-Directory" (this will create a RaspberryPi folder)
+
+Deploy Code:
+- Turn the rover on (it will automatically connect to the router)
+- Turn the joystick on
+- Copy the generated folder "RaspberryPi" inside the folder "scripts" of the git repo (replace previous one)
+- Enter the folder "scripts"
+- Execute the script "removeRGB.sh"
+- Execute the command "deploy.sh <rovername>.local" 
+	- In case you have windows you might not be able to use the name of the rover. In this case use the IPs of the rover provided below.
+	- You might get the warning: "The authenticity of host ... can't be established."
+	- Proceed anyway and follow the instructions on screen (you will be required to enter the password several times)
+- Connect to the rover: 
+	- execute the command "ssh pi@<rovername>.local"
+	- Password: fortisspi
+(In order to run ssh on Windows, you might want to install putty.)
+
+In the shell that opens, type:
+- cd SS19
+- ./build/RaspberryPI.run
+
+IP addresses for AF3-model:
+Blue - 192.168.1.129
+Black - 192.168.1.101 or 192.168.1.102
+White - 192.168.1.113
+Orange - 192.168.1.112
+Red - ?
+
+IP addresses for LaneDetection:
+Blue - 192.168.1.139
+Black - 192.168.1.147
+White - 192.168.1.131
+Orange - 192.168.1.108
+Red - ?

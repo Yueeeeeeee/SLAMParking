@@ -1,0 +1,3 @@
+<launch>
+	<node name="nav_stack_driver" pkg="nav_stack_driver" type="nav_stack_driver" output="screen"/>
+</launch>

@@ -1,0 +1,22 @@
+Change the values depending on the situation:
+
+Platoon:
+{ id:1, leaderID:1, platoonID:1, tailID:1 }
+
+Fuse:
+{ id:999111999, listSenderPlatoonMembers:[1, 0, 0, 0, 0], senderLeaderID:1, targetLeaderID:999111999 }
+
+Handshake
+{action:0,id:999111999,senderID:1}
+
+Leave
+{id:1,vehicleID:1}
+
+Split
+{id:1,newLeaderID:1}
+
+NewLeader
+{id:1,newLeaderID:1,oldLeaderID:999111999,senderID:1}
+
+HeartbeatLeader
+{EB:false, id:1, isLeader:true, listParticipants:[1, 999111999, 0, 0, 0], vehicleID:1}

@@ -1,0 +1,30 @@
+#!/bin/bash
+echo "Script makeComplete started!"
+
+#Save current directory:
+DIR_NAME=${PWD##*/}
+
+#Execute the config file in the current directory:
+echo "Run configure:"
+./configure
+
+#Switch to top level
+cd ..
+
+#Execute there the general adapt script for this rover:
+#(with the current active directory as parameter)
+echo "Run adaption:"
+./adapt*.sh $DIR_NAME
+
+#Switch back to the correct directory:
+cd $DIR_NAME
+
+#Cleaning and waiting
+make clean
+printf "\n\nPress a key to finish with make:\n\n"
+read -n 1 -s
+
+#Execute here lastly the make file:
+echo "Run make:"
+make
+

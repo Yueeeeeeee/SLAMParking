@@ -1,0 +1,85 @@
+This file briefly discusses the semantics implemented by the CAN-based protocol
+with one coordinator and one or more additional workers. The coordinator
+provides a globally synchronous clock to all workers. Furthermore, it can run
+a local worker thread synchronized with its clock. In other words, the role of
+the coordinator inherits all properties of the worker role. 
+
+The protocol knows three phases: synchronization, operation, and termination.
+
+Synchronization
+
+  Coordinator:
+    The coordinator unit enters a loop and waits for all WORKER_x_DONE messages
+    to arrive. GLOBAL_SHUTDOWN message may interrupt this loop and make the
+    coordinator transit into the termination phase.
+    Once all initial WORKER_x_DONE (content is 0x00) messages arrived the
+    coordinator transits into the operation phase.
+
+  Worker:
+    Every worker unit initially enters a loop, waiting for the first message
+    (COORDINATOR_CLOCK) to arrive. While waiting it sends its WORKER_x_DONE
+    (content is 0x00) message each cycle. Once the COORDINATOR_CLOCK message
+    arrives it transits into the operation phase.
+     
+     
+      
+Operation
+
+  Coordinator:
+    The unit starts its main loop and sends the COODINATOR_CLOCK message with
+    its current 64-bit logical clock value (start value is 1). After that it
+    sends all application messages followed by the COORDINATOR_DONE message.
+    
+    Next, a wait loop is entered until all WORKER_x_DONE messages (content is
+    0xFF) from remote units have been received (which means that every remote
+    unit has finished its transmission of application data).  
+  
+    Now, the worker part of the coordinator unit executes its computations 
+    consuming any application data and producing the application messages for
+    the next cycle.
+    
+    Finally, the coordinator computes the remaining cycle time and waits until
+    this remaining time has passed (if positive) or terminates (if the deadline
+    has been violated, i.e. remaining time is negative).
+    
+    The main loop continues.
+
+  Worker:
+    The unit starts its main loop by checking the received coordinator clock
+    value against its local logical clock value in order to detect loss of
+    synchronization situations. If synchronization is lost the worker
+    terminates.
+    
+    A wait loop is entered until all WORKER_x_DONE (content is 0xFF) messages
+    from remote units have been received (which means that every remote unit
+    has finished its transmission of application data).  
+    
+    Now, the worker unit executes its computations consuming any application
+    data and producing the application messages for the next cycle.
+    
+    Finally, the unit enters a wait loop for the next cycle COORDINATOR_CLOCK.
+    If this loop needs more than twice the expected time measured by the unit's
+    local clock, it assumes a failure of the coordinator and initiates the shut
+    down.
+    
+    The main loop contiunes.
+     
+     
+     
+Termination
+  At any point in time, when the message GLOBAL_SHUTDOWN is received, the
+  coordinator and all workers terminate the operation phase, clean up any
+  system resources and exit their program. 
+  
+
+Default CAN message IDs:
+ 0		GLOBAL_SHUTDOWN
+ 1		COORDINATOR_CLOCK
+ ...	application data
+ 255-n	WORKER_n_DONE  
+ ...	workers done messages
+ 254	WORKER_1_DONE
+ 255	COORDINATOR_DONE (i.e. WORKER_0_DONE)
+ 
+ Note that this selection of DONE message IDs guarantees that all application
+ messages are posted before the respective DONE message.

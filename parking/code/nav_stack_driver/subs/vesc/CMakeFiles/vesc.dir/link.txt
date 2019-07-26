@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC   -shared -Wl,-soname,libvesc.so -o libvesc.so CMakeFiles/vesc.dir/src/buffer.c.o CMakeFiles/vesc.dir/src/commands.c.o CMakeFiles/vesc.dir/src/crc.c.o CMakeFiles/vesc.dir/src/datagram.c.o CMakeFiles/vesc.dir/src/hal.c.o 

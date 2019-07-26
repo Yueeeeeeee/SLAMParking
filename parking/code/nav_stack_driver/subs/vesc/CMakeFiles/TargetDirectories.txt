@@ -1,0 +1,3 @@
+/home/pi/ros_catkin_ws/src/velocityFeedback/subs/vesc/CMakeFiles/rebuild_cache.dir
+/home/pi/ros_catkin_ws/src/velocityFeedback/subs/vesc/CMakeFiles/edit_cache.dir
+/home/pi/ros_catkin_ws/src/velocityFeedback/subs/vesc/CMakeFiles/vesc.dir

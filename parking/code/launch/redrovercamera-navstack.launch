@@ -1,0 +1,6 @@
+<launch>
+    <include file="$(find redrover_2dnav)/redrover_configuration.launch" />
+    <include file="$(find redrover_2dnav)/move_base_nav.launch" />
+    <node name="odometry" pkg="odometry" type="odometry" />
+    <node name="brick_imu" pkg="brick_imu" type="brick_imu" />
+</launch>

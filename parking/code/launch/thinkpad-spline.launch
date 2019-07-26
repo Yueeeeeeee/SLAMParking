@@ -1,0 +1,4 @@
+<launch>
+	<node name="transform_publisher" pkg="tf" type="static_transform_publisher" args="0 0 0 0 0 0 1 map imu_link 10"/>
+        <node name="rviz" pkg="rviz" type="rviz" args="-d /home/ponce/Desktop/dev/parking/code/rviz/navigation_spline.rviz"/>
+</launch>

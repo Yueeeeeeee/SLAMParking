@@ -1,0 +1,63 @@
+#!/bin/sh
+
+# The application's name.
+APPL="RaspberryPI";
+
+# The root path for this script.
+if [ -z "$ROOT" ]; then ROOT="."; fi;
+
+# The include, source and library paths.
+IPATH=". inc-lib inc-gen inc";
+VPATH=". src-lib src-gen src";
+LPATH="lib";
+LIBS="af3pihal rt pthread brick rt pthread vesc ";
+
+# The include file for common make definitions.
+MAKEDEFS="Makedefs";
+
+# The include file for the user make definitions.
+USERDEFS="Userdefs";
+
+# The object file rule prefix.
+PREFIX="\${BPATH}/\${APPL}.run: \${BPATH}/";
+
+# The file which stores the object file list.
+OLIST="Objects";
+
+# Search for source files in the known directories.
+echo "searching for source files ...";
+rm -f $ROOT/$OLIST;
+for V in $VPATH; do if [ $V != "." ]; then find $ROOT/$V -name "*.c" >> $ROOT/$OLIST; fi; done;
+
+# The absolute path of the Makefile.
+MF=$ROOT/Makefile;
+
+# Generate the Makefile.
+echo "generating Makefile ...";
+rm -f $ROOT/Makefile;
+echo "# NOTICE: this Makefile has been generated, so your"                                >> $MF;
+echo "#         modifications may get lost. To rebuild this"                              >> $MF;
+echo "#         file, run the './configure' script."                                      >> $MF;
+echo ""                                                                                   >> $MF;
+echo "# The application's name."                                                          >> $MF;
+echo "APPL=$APPL"                                                                         >> $MF;
+echo ""                                                                                   >> $MF;
+echo "# The include and source paths."                                                    >> $MF;
+echo "IPATH=$IPATH"                                                                       >> $MF;
+echo "VPATH=$VPATH"                                                                       >> $MF;
+echo "LPATH=$LPATH"                                                                       >> $MF;
+echo "LIBS=$LIBS"                                                                       >> $MF;
+echo ""                                                                                   >> $MF;
+echo "# Include the common make definitions."                                             >> $MF;
+echo "include $MAKEDEFS"                                                                  >> $MF;
+echo ""                                                                                   >> $MF;
+if [ -f $ROOT/$USERDEFS ]; then
+    echo "# Include the users make definitions."                                          >> $MF;
+    echo "include $USERDEFS"                                                              >> $MF;
+    echo ""                                                                               >> $MF;
+fi;
+echo "# The object file rules of this application." >> $ROOT/Makefile;
+cat $ROOT/$OLIST | awk 'BEGIN {FS="/"}; {print $NF}' | sed "s/.c$/.o/g" \
+                 | awk 'BEGIN {OFS=""}; {print "'"$PREFIX"'", $0}' >> $ROOT/Makefile;
+rm -f $ROOT/$OLIST;
+exit 0;
